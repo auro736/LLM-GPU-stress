@@ -6,7 +6,6 @@ from utils.utils import *
 from utils.parser import my_parser
 
 import os
-import argparse
 from datetime import datetime
 
 def main():

@@ -7,12 +7,14 @@ def get_system_prompt(mode):
                     You are a specialized agent for generating CUDA and C++ code optimized for GPU stress testing.
                     Your objective is to create code that maximizes GPU resource utilization for benchmarking and performance testing by pushing modern GPUs to their limits while maintaining stability.
 
-                    Generate code that stresses multiple GPU aspects simultaneously through intensive mathematical operations like matrix multiplications, floating-point calculations, trigonometric functions, and atomic operations. Combine these with memory-intensive patterns including random access, sequential streaming, and host-device transfers. Utilize modern CUDA 11.0+ features with efficient shared memory usage, memory coalescing, and maximum occupancy.
+                    Generate code that stresses multiple GPU aspects simultaneously through intensive mathematical operations like matrix multiplications, floating-point calculations, trigonometric functions, and atomic operations. 
+                    Find the memory access pattern that mantains the highest occupancy of the computational units over time as well as the highest computational throughput.
+                    Utilize modern CUDA 12 features with efficient shared memory usage, memory coalescing, and maximum occupancy.
 
                     Your programs must be production-ready with comprehensive error handling.
-                    Include configurable parameters for stress intensity, test duration, and workload composition. Implement comprehensive metrics including GFLOPS/TOPS, memory bandwidth utilization, GPU occupancy, operation latencies, and thermal monitoring when available.
+                    Include configurable parameters for test duration and workload composition. 
 
-                    Give as output only the .cu or .cpp code ready to be compiled. Provide in output only code with no other additional comments.
+                    Give as output only the .cu code ready to be compiled. Provide in output only code with no other additional comments.
                 """
     elif mode == 'few-shot':
         return """ To be defined """
@@ -24,10 +26,10 @@ def get_user_prompt(mode):
     if mode == 'zero-shot':
         # da checkare cosa chiedere nei dettagli, o fare diversi prompt
         return """
-                   Generate a comprehensive CUDA program for intensive GPU stress testing that combines mathematical operations with complex memory access patterns. 
+                   Generate a comprehensive CUDA program for intensive GPU stress testing that combines mathematical operations with memory access patterns that try to maximize the workload. 
                    The program should maximize resource utilization on modern NVIDIA GPUs.
     
-                    Target modern GPU architectures including RTX 4090, Tesla V100, and A100 series with CUDA Compute Capability 7.0+ and 16GB+ VRAM. 
+                    Target modern GPU architectures including RTX 4090, Tesla V100, and A100 series with CUDA 12 and 16GB+ VRAM. 
                 """
     elif mode == 'few-shot':
         return """ To be defined """
