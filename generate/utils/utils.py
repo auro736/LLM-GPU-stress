@@ -2,20 +2,37 @@
 def get_system_prompt(mode):
 
     if mode == 'zero-shot':
+        prompt = """
+        You are a programmer specialized in writing CUDA and C++ code optimized for GPU stress testing. 
+        The testing process enables us to examine the impact of potential errors caused by faults in the underlying hardware. Specifically, best practices in testing involve creating specialized programs designed to stress the hardware executing them.
+        For this reason, your objective is to create code that maximizes GPU resource utilization for benchmarking and testing GPUs by pushing the hardware to the utilization limits.
+        Generate code to be divided in one or more scripts that stresses multiple GPU aspects (computational units, memory and schedulers) simultaneously through intensive mathematical operations like matrix multiplications, floating-point calculations, special functions stressing the XU units, and atomic operations. 
+        Utilize modern CUDA 12 features with efficient shared memory usage, memory coalescing, and maximum occupancy.
+        Your programs must be production-ready to be compiled with nvcc with comprehensive error handling. 
+        Find the memory access pattern that mantains the highest occupancy of the computational units over time as well as the highest computational throughput. 
+        To stress the hardware use as much as possible L2 cache.
+        Include user defined parameter for test duration in seconds. The code must be stopped if its duration is longer than user defined time. 
+        Do not use any syncronization function. All the instances of the kernels must be executed in parallel. 
+        Give as output only the code of the one or more scripts by indicating the extension file needed ready to be compiled with nvcc. Provide in output only code with no other additional comments.
+        """
         # da checkare cosa chiedere nei dettagli, o fare diversi prompt
-        return """
-                    You are a specialized agent for generating CUDA and C++ code optimized for GPU stress testing.
-                    Your objective is to create code that maximizes GPU resource utilization for benchmarking and performance testing by pushing modern GPUs to their limits while maintaining stability.
+        # I would suggest to use as much as possible the L2 cache among the other available GPU memory hierarchy levels while asyncronous and parallel exeuction of different threads, thus, operations are executed.
 
-                    Generate code that stresses multiple GPU aspects simultaneously through intensive mathematical operations like matrix multiplications, floating-point calculations, trigonometric functions, and atomic operations. 
-                    Find the memory access pattern that mantains the highest occupancy of the computational units over time as well as the highest computational throughput.
-                    Utilize modern CUDA 12 features with efficient shared memory usage, memory coalescing, and maximum occupancy.
+        # return """
+        #             You are a specialized agent for generating CUDA and C++ code optimized for GPU stress testing.
+        #             Your objective is to create code that maximizes GPU resource utilization for benchmarking and performance testing by pushing modern GPUs to their limits while maintaining stability.
 
-                    Your programs must be production-ready with comprehensive error handling.
-                    Include configurable parameters for test duration and workload composition. 
+        #             Generate code that stresses multiple GPU aspects simultaneously through intensive mathematical operations like matrix multiplications, floating-point calculations, trigonometric functions, and atomic operations. 
+        #             Find the memory access pattern that mantains the highest occupancy of the computational units over time as well as the highest computational throughput.
+        #             Utilize modern CUDA 12 features with efficient shared memory usage, memory coalescing, and maximum occupancy.
 
-                    Give as output only the .cu code ready to be compiled. Provide in output only code with no other additional comments.
-                """
+        #             Your programs must be production-ready with comprehensive error handling.
+        #             Include configurable parameters for test duration and workload composition. 
+
+        #             Give as output only the .cu code ready to be compiled. Provide in output only code with no other additional comments.
+        #         """
+        return prompt
+
     elif mode == 'few-shot':
         return """ To be defined """
     else :
@@ -26,10 +43,7 @@ def get_user_prompt(mode):
     if mode == 'zero-shot':
         # da checkare cosa chiedere nei dettagli, o fare diversi prompt
         return """
-                   Generate a comprehensive CUDA program for intensive GPU stress testing that combines mathematical operations with memory access patterns that try to maximize the workload. 
-                   The program should maximize resource utilization on modern NVIDIA GPUs.
-    
-                    Target modern GPU architectures including RTX 4090, Tesla V100, and A100 series with CUDA 12 and 16GB+ VRAM. 
+                   Following your system prompt your target for stressing is: RTX 4060 GPU with CUDA 12 and 8GB VRAM. 
                 """
     elif mode == 'few-shot':
         return """ To be defined """
@@ -39,33 +53,37 @@ def get_user_prompt(mode):
 
 
 def clean_string(text):
-	"""
-	Removes ```json at the beginning and ``` at the end of a string if present,
-	and ensures the string starts with { and ends with }.
+    """
+    Removes ```json at the beginning and ``` at the end of a string if present,
+    and ensures the string starts with { and ends with }.
 
-	Args:
-	text (str): The input string to clean
+    Args:
+    text (str): The input string to clean
 
-	Returns:
-	str: The cleaned string, or None if it doesn't start with { and end with }
-	"""
-	text = text.strip()
-	code = ''
+    Returns:
+    str: The cleaned string, or None if it doesn't start with { and end with }
+    """
+    text = text.strip()
+    code = ''
 
-	if text.startswith('```cpp'):
-		text = text[6:].strip() 
-		code = 'cpp'
+    if text.startswith('```cpp'):
+        text = text[6:].strip() 
+        code = 'cpp'
 
-	if text.startswith('```cuda'):
-		text = text[7:].strip() 
-		code = 'cuda'
+    if text.startswith('```cuda'):
+        text = text[7:].strip() 
+        code = 'cuda'
+        
+    if text.startswith('```cu'):
+        text = text[5:].strip() 
+        code = 'cuda'
 
-	if text.startswith('```json'):
-		text = text[7:].strip() 
-		code = 'json'
+    if text.startswith('```json'):
+        text = text[7:].strip() 
+        code = 'json'
 
-	if text.endswith('```'):
-		text = text[:-3].strip()
-		
-	return text, code
+    if text.endswith('```'):
+        text = text[:-3].strip()
+
+    return text, code
 
