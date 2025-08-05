@@ -1,0 +1,9 @@
+WG size of kernel = 16 X 16
+Randomizing the input matrix
+Start the SRAD main loop
+
+Context 0x5652f348cc00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 1:
+ [durata: 2025-06-04 20:54:07.465 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------

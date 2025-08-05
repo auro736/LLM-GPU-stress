@@ -1,0 +1,1206 @@
+GPU 0: NVIDIA GeForce RTX 4060 Laptop GPU (UUID: GPU-1094bb47-f390-6560-0fca-43e993217823)
+Using compare file: ./test-apps/gpu-burn/compare.ptx
+Burning for 60 seconds.
+Requesting metric 'sm__cycles_active.sum'
+Requesting metric 'sys__cycles_active.sum'
+Requesting metric 'sm__warps_active.sum'
+Requesting metric 'smsp__inst_executed_op_generic_atom_dot_alu.sum'
+Requesting metric 'sm__cycles_elapsed.sum'
+Requesting metric 'sys__cycles_elapsed.sum'
+Requesting metric 'dram__sectors_read.sum'
+Requesting metric 'dram__sectors_write.sum'
+Requesting metric 'smsp__inst_executed_op_generic_atom_dot_cas.sum'
+Requesting metric 'smsp__inst_executed_op_global_red.sum'
+Requesting metric 'sm__inst_executed.sum'
+Requesting metric 'smsp__inst_executed_pipe_fma.sum'
+Requesting metric 'smsp__inst_executed_pipe_fp64.sum'
+Requesting metric 'sm__inst_issued.sum'
+Requesting metric 'lts__t_sectors_op_read_lookup_miss.sum'
+Requesting metric 'smsp__warps_launched.sum'
+Requesting metric 'smsp__thread_inst_executed.sum'
+Requesting metric 'smsp__inst_executed_op_local_st.sum'
+Requesting metric 'smsp__inst_executed_op_local_ld.sum'
+Requesting metric 'smsp__inst_executed_op_global_st.sum'
+Requesting metric 'smsp__inst_executed_op_global_ld.sum'
+Initialized device 0 with 7836 MB of memory (7711 MB available, using 3855 MB of it), using FLOATS
+Results are 268435456 bytes each, thus performing 13 iterations
+
+Context 0x564092bd3a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 1:
+ [durata: 9252 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88383e+09
+1                                       sm__cycles_active.sum                                                                               6.88395e+09
+2                                       sm__cycles_active.sum                                                                               6.88312e+09
+3                                       sm__cycles_active.sum                                                                               6.88388e+09
+4                                       sm__cycles_active.sum                                                                               6.88154e+09
+5                                       sm__cycles_active.sum                                                                               6.88235e+09
+6                                       sm__cycles_active.sum                                                                               6.88229e+09
+0                                       sys__cycles_active.sum                                                                              2.65709e+08
+1                                       sys__cycles_active.sum                                                                              2.67182e+08
+2                                       sys__cycles_active.sum                                                                              2.64124e+08
+3                                       sys__cycles_active.sum                                                                              2.68128e+08
+4                                       sys__cycles_active.sum                                                                              2.66572e+08
+5                                       sys__cycles_active.sum                                                                              2.68623e+08
+6                                       sys__cycles_active.sum                                                                              2.66517e+08
+0                                       sm__warps_active.sum                                                                                1.09605e+11
+1                                       sm__warps_active.sum                                                                                1.09603e+11
+2                                       sm__warps_active.sum                                                                                1.09608e+11
+3                                       sm__warps_active.sum                                                                                1.0962e+11
+4                                       sm__warps_active.sum                                                                                1.0959e+11
+5                                       sm__warps_active.sum                                                                                1.09606e+11
+6                                       sm__warps_active.sum                                                                                1.09596e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+1                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+2                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+3                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+4                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+5                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+6                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.8863e+09
+1                                       sm__cycles_elapsed.sum                                                                              6.88749e+09
+2                                       sm__cycles_elapsed.sum                                                                              6.89112e+09
+3                                       sm__cycles_elapsed.sum                                                                              6.88654e+09
+4                                       sm__cycles_elapsed.sum                                                                              6.88739e+09
+5                                       sm__cycles_elapsed.sum                                                                              6.89242e+09
+6                                       sm__cycles_elapsed.sum                                                                              6.88619e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.65709e+08
+1                                       sys__cycles_elapsed.sum                                                                             2.67182e+08
+2                                       sys__cycles_elapsed.sum                                                                             2.64124e+08
+3                                       sys__cycles_elapsed.sum                                                                             2.68128e+08
+4                                       sys__cycles_elapsed.sum                                                                             2.66572e+08
+5                                       sys__cycles_elapsed.sum                                                                             2.68623e+08
+6                                       sys__cycles_elapsed.sum                                                                             2.66517e+08
+0                                       dram__sectors_read.sum                                                                              1.43801e+08
+1                                       dram__sectors_read.sum                                                                              1.45272e+08
+2                                       dram__sectors_read.sum                                                                              1.47893e+08
+3                                       dram__sectors_read.sum                                                                              1.54635e+08
+4                                       dram__sectors_read.sum                                                                              1.45557e+08
+5                                       dram__sectors_read.sum                                                                              1.51557e+08
+6                                       dram__sectors_read.sum                                                                              1.51973e+08
+0                                       dram__sectors_write.sum                                                                             8.86968e+06
+1                                       dram__sectors_write.sum                                                                             8.85873e+06
+2                                       dram__sectors_write.sum                                                                             8.8712e+06
+3                                       dram__sectors_write.sum                                                                             8.8719e+06
+4                                       dram__sectors_write.sum                                                                             8.85389e+06
+5                                       dram__sectors_write.sum                                                                             8.87298e+06
+6                                       dram__sectors_write.sum                                                                             8.86013e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+1                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+2                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+3                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+4                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+5                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+6                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+1                                       smsp__inst_executed_op_global_red.sum                                                               0
+2                                       smsp__inst_executed_op_global_red.sum                                                               0
+3                                       smsp__inst_executed_op_global_red.sum                                                               0
+4                                       smsp__inst_executed_op_global_red.sum                                                               0
+5                                       smsp__inst_executed_op_global_red.sum                                                               0
+6                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+1                                       sm__inst_executed.sum                                                                               2.05979e+10
+2                                       sm__inst_executed.sum                                                                               2.05979e+10
+3                                       sm__inst_executed.sum                                                                               2.05979e+10
+4                                       sm__inst_executed.sum                                                                               2.05979e+10
+5                                       sm__inst_executed.sum                                                                               2.05979e+10
+6                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+1                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+2                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+3                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+4                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+5                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+6                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+1                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+2                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+3                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+4                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+5                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+6                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+1                                       sm__inst_issued.sum                                                                                 2.05979e+10
+2                                       sm__inst_issued.sum                                                                                 2.05979e+10
+3                                       sm__inst_issued.sum                                                                                 2.05979e+10
+4                                       sm__inst_issued.sum                                                                                 2.05979e+10
+5                                       sm__inst_issued.sum                                                                                 2.05979e+10
+6                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.43798e+08
+1                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.4527e+08
+2                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.47891e+08
+3                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.54632e+08
+4                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.45555e+08
+5                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.51555e+08
+6                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.51971e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+1                                       smsp__warps_launched.sum                                                                            32768
+2                                       smsp__warps_launched.sum                                                                            32768
+3                                       smsp__warps_launched.sum                                                                            32768
+4                                       smsp__warps_launched.sum                                                                            32768
+5                                       smsp__warps_launched.sum                                                                            32768
+6                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+1                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+2                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+3                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+4                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+5                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+6                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+1                                       smsp__inst_executed_op_local_st.sum                                                                 0
+2                                       smsp__inst_executed_op_local_st.sum                                                                 0
+3                                       smsp__inst_executed_op_local_st.sum                                                                 0
+4                                       smsp__inst_executed_op_local_st.sum                                                                 0
+5                                       smsp__inst_executed_op_local_st.sum                                                                 0
+6                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+1                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+2                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+3                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+4                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+5                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+6                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+1                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+2                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+3                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+4                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+5                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+6                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+1                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+2                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+3                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+4                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+5                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+6                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x564092bd3a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 2:
+ [durata: 9804 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88226e+09
+1                                       sm__cycles_active.sum                                                                               6.88233e+09
+2                                       sm__cycles_active.sum                                                                               6.88156e+09
+3                                       sm__cycles_active.sum                                                                               6.88228e+09
+4                                       sm__cycles_active.sum                                                                               6.88472e+09
+5                                       sm__cycles_active.sum                                                                               6.88281e+09
+6                                       sm__cycles_active.sum                                                                               9.88816e+08
+0                                       sys__cycles_active.sum                                                                              2.63552e+08
+1                                       sys__cycles_active.sum                                                                              2.66987e+08
+2                                       sys__cycles_active.sum                                                                              2.67308e+08
+3                                       sys__cycles_active.sum                                                                              2.67685e+08
+4                                       sys__cycles_active.sum                                                                              2.66748e+08
+5                                       sys__cycles_active.sum                                                                              2.6588e+08
+6                                       sys__cycles_active.sum                                                                              3.64372e+07
+0                                       sm__warps_active.sum                                                                                1.09598e+11
+1                                       sm__warps_active.sum                                                                                1.09597e+11
+2                                       sm__warps_active.sum                                                                                1.09574e+11
+3                                       sm__warps_active.sum                                                                                1.09582e+11
+4                                       sm__warps_active.sum                                                                                1.09656e+11
+5                                       sm__warps_active.sum                                                                                1.09648e+11
+6                                       sm__warps_active.sum                                                                                4.40633e+10
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+1                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+2                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+3                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+4                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+5                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+6                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.89087e+09
+1                                       sm__cycles_elapsed.sum                                                                              6.88814e+09
+2                                       sm__cycles_elapsed.sum                                                                              6.88751e+09
+3                                       sm__cycles_elapsed.sum                                                                              6.89143e+09
+4                                       sm__cycles_elapsed.sum                                                                              6.88881e+09
+5                                       sm__cycles_elapsed.sum                                                                              6.88188e+09
+6                                       sm__cycles_elapsed.sum                                                                              9.94043e+08
+0                                       sys__cycles_elapsed.sum                                                                             2.63552e+08
+1                                       sys__cycles_elapsed.sum                                                                             2.66987e+08
+2                                       sys__cycles_elapsed.sum                                                                             2.67308e+08
+3                                       sys__cycles_elapsed.sum                                                                             2.67685e+08
+4                                       sys__cycles_elapsed.sum                                                                             2.66748e+08
+5                                       sys__cycles_elapsed.sum                                                                             2.6588e+08
+6                                       sys__cycles_elapsed.sum                                                                             3.64372e+07
+0                                       dram__sectors_read.sum                                                                              1.48203e+08
+1                                       dram__sectors_read.sum                                                                              1.45798e+08
+2                                       dram__sectors_read.sum                                                                              1.47261e+08
+3                                       dram__sectors_read.sum                                                                              1.48811e+08
+4                                       dram__sectors_read.sum                                                                              1.48306e+08
+5                                       dram__sectors_read.sum                                                                              1.61064e+08
+6                                       dram__sectors_read.sum                                                                              1.09085e+08
+0                                       dram__sectors_write.sum                                                                             8.86118e+06
+1                                       dram__sectors_write.sum                                                                             8.8568e+06
+2                                       dram__sectors_write.sum                                                                             8.86162e+06
+3                                       dram__sectors_write.sum                                                                             8.86203e+06
+4                                       dram__sectors_write.sum                                                                             8.85919e+06
+5                                       dram__sectors_write.sum                                                                             8.86095e+06
+6                                       dram__sectors_write.sum                                                                             465940
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+1                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+2                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+3                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+4                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+5                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+6                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+1                                       smsp__inst_executed_op_global_red.sum                                                               0
+2                                       smsp__inst_executed_op_global_red.sum                                                               0
+3                                       smsp__inst_executed_op_global_red.sum                                                               0
+4                                       smsp__inst_executed_op_global_red.sum                                                               0
+5                                       smsp__inst_executed_op_global_red.sum                                                               0
+6                                       smsp__inst_executed_op_global_red.sum                                                               2.09715e+06
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+1                                       sm__inst_executed.sum                                                                               2.05979e+10
+2                                       sm__inst_executed.sum                                                                               2.05979e+10
+3                                       sm__inst_executed.sum                                                                               2.05979e+10
+4                                       sm__inst_executed.sum                                                                               2.05979e+10
+5                                       sm__inst_executed.sum                                                                               2.05979e+10
+6                                       sm__inst_executed.sum                                                                               3.37641e+08
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+1                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+2                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+3                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+4                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+5                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+6                                       smsp__inst_executed_pipe_fma.sum                                                                    1.15343e+08
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+1                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+2                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+3                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+4                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+5                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+6                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+1                                       sm__inst_issued.sum                                                                                 2.05979e+10
+2                                       sm__inst_issued.sum                                                                                 2.05979e+10
+3                                       sm__inst_issued.sum                                                                                 2.05979e+10
+4                                       sm__inst_issued.sum                                                                                 2.05979e+10
+5                                       sm__inst_issued.sum                                                                                 2.05979e+10
+6                                       sm__inst_issued.sum                                                                                 3.37655e+08
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.48201e+08
+1                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.45796e+08
+2                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.47258e+08
+3                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.48808e+08
+4                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.48305e+08
+5                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.61062e+08
+6                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.09084e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+1                                       smsp__warps_launched.sum                                                                            32768
+2                                       smsp__warps_launched.sum                                                                            32768
+3                                       smsp__warps_launched.sum                                                                            32768
+4                                       smsp__warps_launched.sum                                                                            32768
+5                                       smsp__warps_launched.sum                                                                            32768
+6                                       smsp__warps_launched.sum                                                                            2.09715e+06
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+1                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+2                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+3                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+4                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+5                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+6                                       smsp__thread_inst_executed.sum                                                                      1.08045e+10
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+1                                       smsp__inst_executed_op_local_st.sum                                                                 0
+2                                       smsp__inst_executed_op_local_st.sum                                                                 0
+3                                       smsp__inst_executed_op_local_st.sum                                                                 0
+4                                       smsp__inst_executed_op_local_st.sum                                                                 0
+5                                       smsp__inst_executed_op_local_st.sum                                                                 0
+6                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+1                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+2                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+3                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+4                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+5                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+6                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+1                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+2                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+3                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+4                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+5                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+6                                       smsp__inst_executed_op_global_st.sum                                                                0
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+1                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+2                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+3                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+4                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+5                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+6                                       smsp__inst_executed_op_global_ld.sum                                                                2.7263e+07
+
+Context 0x564092bd3a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 3:
+ [durata: 9188 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88299e+09
+1                                       sm__cycles_active.sum                                                                               6.8822e+09
+2                                       sm__cycles_active.sum                                                                               6.88232e+09
+3                                       sm__cycles_active.sum                                                                               6.88469e+09
+4                                       sm__cycles_active.sum                                                                               6.88155e+09
+5                                       sm__cycles_active.sum                                                                               6.88393e+09
+6                                       sm__cycles_active.sum                                                                               6.88384e+09
+0                                       sys__cycles_active.sum                                                                              2.66557e+08
+1                                       sys__cycles_active.sum                                                                              2.66391e+08
+2                                       sys__cycles_active.sum                                                                              2.67109e+08
+3                                       sys__cycles_active.sum                                                                              2.62289e+08
+4                                       sys__cycles_active.sum                                                                              2.6096e+08
+5                                       sys__cycles_active.sum                                                                              2.63659e+08
+6                                       sys__cycles_active.sum                                                                              2.58644e+08
+0                                       sm__warps_active.sum                                                                                1.09597e+11
+1                                       sm__warps_active.sum                                                                                1.09599e+11
+2                                       sm__warps_active.sum                                                                                1.09594e+11
+3                                       sm__warps_active.sum                                                                                1.09621e+11
+4                                       sm__warps_active.sum                                                                                1.0954e+11
+5                                       sm__warps_active.sum                                                                                1.0961e+11
+6                                       sm__warps_active.sum                                                                                1.0961e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+1                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+2                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+3                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+4                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+5                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+6                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88566e+09
+1                                       sm__cycles_elapsed.sum                                                                              6.89049e+09
+2                                       sm__cycles_elapsed.sum                                                                              6.89174e+09
+3                                       sm__cycles_elapsed.sum                                                                              6.89112e+09
+4                                       sm__cycles_elapsed.sum                                                                              6.88813e+09
+5                                       sm__cycles_elapsed.sum                                                                              6.88674e+09
+6                                       sm__cycles_elapsed.sum                                                                              6.88948e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.66557e+08
+1                                       sys__cycles_elapsed.sum                                                                             2.66391e+08
+2                                       sys__cycles_elapsed.sum                                                                             2.67109e+08
+3                                       sys__cycles_elapsed.sum                                                                             2.62289e+08
+4                                       sys__cycles_elapsed.sum                                                                             2.6096e+08
+5                                       sys__cycles_elapsed.sum                                                                             2.63659e+08
+6                                       sys__cycles_elapsed.sum                                                                             2.58644e+08
+0                                       dram__sectors_read.sum                                                                              1.49123e+08
+1                                       dram__sectors_read.sum                                                                              1.4778e+08
+2                                       dram__sectors_read.sum                                                                              1.51506e+08
+3                                       dram__sectors_read.sum                                                                              1.48196e+08
+4                                       dram__sectors_read.sum                                                                              1.50018e+08
+5                                       dram__sectors_read.sum                                                                              1.54155e+08
+6                                       dram__sectors_read.sum                                                                              1.48272e+08
+0                                       dram__sectors_write.sum                                                                             8.86539e+06
+1                                       dram__sectors_write.sum                                                                             8.86812e+06
+2                                       dram__sectors_write.sum                                                                             8.86872e+06
+3                                       dram__sectors_write.sum                                                                             8.85168e+06
+4                                       dram__sectors_write.sum                                                                             8.85878e+06
+5                                       dram__sectors_write.sum                                                                             8.86392e+06
+6                                       dram__sectors_write.sum                                                                             8.85208e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+1                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+2                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+3                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+4                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+5                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+6                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+1                                       smsp__inst_executed_op_global_red.sum                                                               0
+2                                       smsp__inst_executed_op_global_red.sum                                                               0
+3                                       smsp__inst_executed_op_global_red.sum                                                               0
+4                                       smsp__inst_executed_op_global_red.sum                                                               0
+5                                       smsp__inst_executed_op_global_red.sum                                                               0
+6                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+1                                       sm__inst_executed.sum                                                                               2.05979e+10
+2                                       sm__inst_executed.sum                                                                               2.05979e+10
+3                                       sm__inst_executed.sum                                                                               2.05979e+10
+4                                       sm__inst_executed.sum                                                                               2.05979e+10
+5                                       sm__inst_executed.sum                                                                               2.05979e+10
+6                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+1                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+2                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+3                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+4                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+5                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+6                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+1                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+2                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+3                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+4                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+5                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+6                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+1                                       sm__inst_issued.sum                                                                                 2.05979e+10
+2                                       sm__inst_issued.sum                                                                                 2.05979e+10
+3                                       sm__inst_issued.sum                                                                                 2.05979e+10
+4                                       sm__inst_issued.sum                                                                                 2.05979e+10
+5                                       sm__inst_issued.sum                                                                                 2.05979e+10
+6                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.49121e+08
+1                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.47778e+08
+2                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.51503e+08
+3                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.48193e+08
+4                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.50018e+08
+5                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.54153e+08
+6                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.48269e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+1                                       smsp__warps_launched.sum                                                                            32768
+2                                       smsp__warps_launched.sum                                                                            32768
+3                                       smsp__warps_launched.sum                                                                            32768
+4                                       smsp__warps_launched.sum                                                                            32768
+5                                       smsp__warps_launched.sum                                                                            32768
+6                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+1                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+2                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+3                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+4                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+5                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+6                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+1                                       smsp__inst_executed_op_local_st.sum                                                                 0
+2                                       smsp__inst_executed_op_local_st.sum                                                                 0
+3                                       smsp__inst_executed_op_local_st.sum                                                                 0
+4                                       smsp__inst_executed_op_local_st.sum                                                                 0
+5                                       smsp__inst_executed_op_local_st.sum                                                                 0
+6                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+1                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+2                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+3                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+4                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+5                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+6                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+1                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+2                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+3                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+4                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+5                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+6                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+1                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+2                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+3                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+4                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+5                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+6                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+Using compare file: ./test-apps/gpu-burn/compare.ptx
+Burning for 60 seconds.
+60.0%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 
+	Summary at:   lun 21 apr 2025, 16:45:37, CEST
+
+Context 0x564092bd3a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 4:
+ [durata: 9756 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88226e+09
+1                                       sm__cycles_active.sum                                                                               6.88151e+09
+2                                       sm__cycles_active.sum                                                                               6.88548e+09
+3                                       sm__cycles_active.sum                                                                               6.8831e+09
+4                                       sm__cycles_active.sum                                                                               6.88227e+09
+5                                       sm__cycles_active.sum                                                                               9.71086e+08
+6                                       sm__cycles_active.sum                                                                               6.88138e+09
+0                                       sys__cycles_active.sum                                                                              2.67407e+08
+1                                       sys__cycles_active.sum                                                                              2.62073e+08
+2                                       sys__cycles_active.sum                                                                              2.6494e+08
+3                                       sys__cycles_active.sum                                                                              2.66476e+08
+4                                       sys__cycles_active.sum                                                                              2.65633e+08
+5                                       sys__cycles_active.sum                                                                              3.64193e+07
+6                                       sys__cycles_active.sum                                                                              2.69775e+08
+0                                       sm__warps_active.sum                                                                                1.09607e+11
+1                                       sm__warps_active.sum                                                                                1.09586e+11
+2                                       sm__warps_active.sum                                                                                1.09644e+11
+3                                       sm__warps_active.sum                                                                                1.096e+11
+4                                       sm__warps_active.sum                                                                                1.09584e+11
+5                                       sm__warps_active.sum                                                                                4.36059e+10
+6                                       sm__warps_active.sum                                                                                1.09577e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+1                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+2                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+3                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+4                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+5                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+6                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.89289e+09
+1                                       sm__cycles_elapsed.sum                                                                              6.88895e+09
+2                                       sm__cycles_elapsed.sum                                                                              6.88929e+09
+3                                       sm__cycles_elapsed.sum                                                                              6.89222e+09
+4                                       sm__cycles_elapsed.sum                                                                              6.88849e+09
+5                                       sm__cycles_elapsed.sum                                                                              9.93539e+08
+6                                       sm__cycles_elapsed.sum                                                                              6.89116e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.67407e+08
+1                                       sys__cycles_elapsed.sum                                                                             2.62073e+08
+2                                       sys__cycles_elapsed.sum                                                                             2.6494e+08
+3                                       sys__cycles_elapsed.sum                                                                             2.66476e+08
+4                                       sys__cycles_elapsed.sum                                                                             2.65633e+08
+5                                       sys__cycles_elapsed.sum                                                                             3.64193e+07
+6                                       sys__cycles_elapsed.sum                                                                             2.69775e+08
+0                                       dram__sectors_read.sum                                                                              1.58262e+08
+1                                       dram__sectors_read.sum                                                                              1.48154e+08
+2                                       dram__sectors_read.sum                                                                              1.46566e+08
+3                                       dram__sectors_read.sum                                                                              1.54615e+08
+4                                       dram__sectors_read.sum                                                                              1.5422e+08
+5                                       dram__sectors_read.sum                                                                              1.09076e+08
+6                                       dram__sectors_read.sum                                                                              1.52466e+08
+0                                       dram__sectors_write.sum                                                                             8.8604e+06
+1                                       dram__sectors_write.sum                                                                             8.8512e+06
+2                                       dram__sectors_write.sum                                                                             8.8651e+06
+3                                       dram__sectors_write.sum                                                                             8.85359e+06
+4                                       dram__sectors_write.sum                                                                             8.86862e+06
+5                                       dram__sectors_write.sum                                                                             455672
+6                                       dram__sectors_write.sum                                                                             8.8669e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+1                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+2                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+3                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+4                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+5                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+6                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+1                                       smsp__inst_executed_op_global_red.sum                                                               0
+2                                       smsp__inst_executed_op_global_red.sum                                                               0
+3                                       smsp__inst_executed_op_global_red.sum                                                               0
+4                                       smsp__inst_executed_op_global_red.sum                                                               0
+5                                       smsp__inst_executed_op_global_red.sum                                                               2.09715e+06
+6                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+1                                       sm__inst_executed.sum                                                                               2.05979e+10
+2                                       sm__inst_executed.sum                                                                               2.05979e+10
+3                                       sm__inst_executed.sum                                                                               2.05979e+10
+4                                       sm__inst_executed.sum                                                                               2.05979e+10
+5                                       sm__inst_executed.sum                                                                               3.37641e+08
+6                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+1                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+2                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+3                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+4                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+5                                       smsp__inst_executed_pipe_fma.sum                                                                    1.15343e+08
+6                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+1                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+2                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+3                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+4                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+5                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+6                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+1                                       sm__inst_issued.sum                                                                                 2.05979e+10
+2                                       sm__inst_issued.sum                                                                                 2.05979e+10
+3                                       sm__inst_issued.sum                                                                                 2.05979e+10
+4                                       sm__inst_issued.sum                                                                                 2.05979e+10
+5                                       sm__inst_issued.sum                                                                                 3.37656e+08
+6                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.58261e+08
+1                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.48152e+08
+2                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.46564e+08
+3                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.54613e+08
+4                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.54218e+08
+5                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.09076e+08
+6                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.52465e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+1                                       smsp__warps_launched.sum                                                                            32768
+2                                       smsp__warps_launched.sum                                                                            32768
+3                                       smsp__warps_launched.sum                                                                            32768
+4                                       smsp__warps_launched.sum                                                                            32768
+5                                       smsp__warps_launched.sum                                                                            2.09715e+06
+6                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+1                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+2                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+3                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+4                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+5                                       smsp__thread_inst_executed.sum                                                                      1.08045e+10
+6                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+1                                       smsp__inst_executed_op_local_st.sum                                                                 0
+2                                       smsp__inst_executed_op_local_st.sum                                                                 0
+3                                       smsp__inst_executed_op_local_st.sum                                                                 0
+4                                       smsp__inst_executed_op_local_st.sum                                                                 0
+5                                       smsp__inst_executed_op_local_st.sum                                                                 0
+6                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+1                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+2                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+3                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+4                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+5                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+6                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+1                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+2                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+3                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+4                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+5                                       smsp__inst_executed_op_global_st.sum                                                                0
+6                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+1                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+2                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+3                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+4                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+5                                       smsp__inst_executed_op_global_ld.sum                                                                2.7263e+07
+6                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+66.7%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 66.7%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 66.7%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 66.7%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 66.7%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 66.7%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 66.7%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 66.7%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 66.7%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 66.7%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 66.7%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 66.7%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 66.7%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 66.7%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 66.7%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 66.7%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 66.7%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 66.7%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 66.7%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 75.0%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 
+	Summary at:   lun 21 apr 2025, 16:45:46, CEST
+
+75.0%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 75.0%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 75.0%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 75.0%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 75.0%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 75.0%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 75.0%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 75.0%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 75.0%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 75.0%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 75.0%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 75.0%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 75.0%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 75.0%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 75.0%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 75.0%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 75.0%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 75.0%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 
+Context 0x564092bd3a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 5:
+ [durata: 9246 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88469e+09
+1                                       sm__cycles_active.sum                                                                               6.88145e+09
+2                                       sm__cycles_active.sum                                                                               6.88145e+09
+3                                       sm__cycles_active.sum                                                                               6.88456e+09
+4                                       sm__cycles_active.sum                                                                               6.88383e+09
+5                                       sm__cycles_active.sum                                                                               6.88317e+09
+6                                       sm__cycles_active.sum                                                                               6.88308e+09
+0                                       sys__cycles_active.sum                                                                              2.64109e+08
+1                                       sys__cycles_active.sum                                                                              2.64957e+08
+2                                       sys__cycles_active.sum                                                                              2.65442e+08
+3                                       sys__cycles_active.sum                                                                              2.62199e+08
+4                                       sys__cycles_active.sum                                                                              2.64053e+08
+5                                       sys__cycles_active.sum                                                                              2.67057e+08
+6                                       sys__cycles_active.sum                                                                              2.62901e+08
+0                                       sm__warps_active.sum                                                                                1.09631e+11
+1                                       sm__warps_active.sum                                                                                1.09583e+11
+2                                       sm__warps_active.sum                                                                                1.0957e+11
+3                                       sm__warps_active.sum                                                                                1.09626e+11
+4                                       sm__warps_active.sum                                                                                1.09619e+11
+5                                       sm__warps_active.sum                                                                                1.09592e+11
+6                                       sm__warps_active.sum                                                                                1.0961e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+1                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+2                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+3                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+4                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+5                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+6                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88581e+09
+1                                       sm__cycles_elapsed.sum                                                                              6.88543e+09
+2                                       sm__cycles_elapsed.sum                                                                              6.89082e+09
+3                                       sm__cycles_elapsed.sum                                                                              6.88658e+09
+4                                       sm__cycles_elapsed.sum                                                                              6.88697e+09
+5                                       sm__cycles_elapsed.sum                                                                              6.88976e+09
+6                                       sm__cycles_elapsed.sum                                                                              6.88832e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.64109e+08
+1                                       sys__cycles_elapsed.sum                                                                             2.64957e+08
+2                                       sys__cycles_elapsed.sum                                                                             2.65442e+08
+3                                       sys__cycles_elapsed.sum                                                                             2.62199e+08
+4                                       sys__cycles_elapsed.sum                                                                             2.64053e+08
+5                                       sys__cycles_elapsed.sum                                                                             2.67057e+08
+6                                       sys__cycles_elapsed.sum                                                                             2.62901e+08
+0                                       dram__sectors_read.sum                                                                              1.49165e+08
+1                                       dram__sectors_read.sum                                                                              1.48191e+08
+2                                       dram__sectors_read.sum                                                                              1.48658e+08
+3                                       dram__sectors_read.sum                                                                              1.47947e+08
+4                                       dram__sectors_read.sum                                                                              1.46918e+08
+5                                       dram__sectors_read.sum                                                                              1.46734e+08
+6                                       dram__sectors_read.sum                                                                              1.5485e+08
+0                                       dram__sectors_write.sum                                                                             8.86942e+06
+1                                       dram__sectors_write.sum                                                                             8.86758e+06
+2                                       dram__sectors_write.sum                                                                             8.85812e+06
+3                                       dram__sectors_write.sum                                                                             8.88125e+06
+4                                       dram__sectors_write.sum                                                                             8.86544e+06
+5                                       dram__sectors_write.sum                                                                             8.85876e+06
+6                                       dram__sectors_write.sum                                                                             8.87278e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+1                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+2                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+3                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+4                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+5                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+6                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+1                                       smsp__inst_executed_op_global_red.sum                                                               0
+2                                       smsp__inst_executed_op_global_red.sum                                                               0
+3                                       smsp__inst_executed_op_global_red.sum                                                               0
+4                                       smsp__inst_executed_op_global_red.sum                                                               0
+5                                       smsp__inst_executed_op_global_red.sum                                                               0
+6                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+1                                       sm__inst_executed.sum                                                                               2.05979e+10
+2                                       sm__inst_executed.sum                                                                               2.05979e+10
+3                                       sm__inst_executed.sum                                                                               2.05979e+10
+4                                       sm__inst_executed.sum                                                                               2.05979e+10
+5                                       sm__inst_executed.sum                                                                               2.05979e+10
+6                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+1                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+2                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+3                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+4                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+5                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+6                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+1                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+2                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+3                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+4                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+5                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+6                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+1                                       sm__inst_issued.sum                                                                                 2.05979e+10
+2                                       sm__inst_issued.sum                                                                                 2.05979e+10
+3                                       sm__inst_issued.sum                                                                                 2.05979e+10
+4                                       sm__inst_issued.sum                                                                                 2.05979e+10
+5                                       sm__inst_issued.sum                                                                                 2.05979e+10
+6                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.49162e+08
+1                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.48192e+08
+2                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.48656e+08
+3                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.47945e+08
+4                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.46915e+08
+5                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.46732e+08
+6                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.54848e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+1                                       smsp__warps_launched.sum                                                                            32768
+2                                       smsp__warps_launched.sum                                                                            32768
+3                                       smsp__warps_launched.sum                                                                            32768
+4                                       smsp__warps_launched.sum                                                                            32768
+5                                       smsp__warps_launched.sum                                                                            32768
+6                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+1                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+2                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+3                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+4                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+5                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+6                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+1                                       smsp__inst_executed_op_local_st.sum                                                                 0
+2                                       smsp__inst_executed_op_local_st.sum                                                                 0
+3                                       smsp__inst_executed_op_local_st.sum                                                                 0
+4                                       smsp__inst_executed_op_local_st.sum                                                                 0
+5                                       smsp__inst_executed_op_local_st.sum                                                                 0
+6                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+1                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+2                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+3                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+4                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+5                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+6                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+1                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+2                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+3                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+4                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+5                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+6                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+1                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+2                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+3                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+4                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+5                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+6                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+83.3%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 83.3%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 83.3%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 83.3%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 83.3%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 83.3%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 83.3%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 83.3%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 83.3%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 83.3%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 58 C 83.3%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 59 C 83.3%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 59 C 83.3%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 59 C 83.3%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 59 C 83.3%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 59 C 83.3%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 59 C 83.3%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 59 C 83.3%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 59 C 83.3%  proc'd: 13 (399 Gflop/s)   errors: 0   temps: 59 C 90.0%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 
+	Summary at:   lun 21 apr 2025, 16:45:55, CEST
+
+91.7%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 91.7%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 91.7%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 91.7%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 91.7%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 91.7%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 91.7%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 91.7%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 91.7%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 91.7%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 91.7%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 91.7%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 91.7%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 91.7%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 91.7%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 91.7%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 91.7%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 91.7%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 91.7%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 
+Context 0x564092bd3a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 6:
+ [durata: 9652 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88297e+09
+1                                       sm__cycles_active.sum                                                                               6.88298e+09
+2                                       sm__cycles_active.sum                                                                               6.8831e+09
+3                                       sm__cycles_active.sum                                                                               6.88136e+09
+4                                       sm__cycles_active.sum                                                                               9.59163e+08
+5                                       sm__cycles_active.sum                                                                               6.88454e+09
+6                                       sm__cycles_active.sum                                                                               6.88377e+09
+0                                       sys__cycles_active.sum                                                                              2.63827e+08
+1                                       sys__cycles_active.sum                                                                              2.61211e+08
+2                                       sys__cycles_active.sum                                                                              2.65516e+08
+3                                       sys__cycles_active.sum                                                                              2.66352e+08
+4                                       sys__cycles_active.sum                                                                              3.63831e+07
+5                                       sys__cycles_active.sum                                                                              2.72238e+08
+6                                       sys__cycles_active.sum                                                                              2.67217e+08
+0                                       sm__warps_active.sum                                                                                1.09603e+11
+1                                       sm__warps_active.sum                                                                                1.0962e+11
+2                                       sm__warps_active.sum                                                                                1.09592e+11
+3                                       sm__warps_active.sum                                                                                1.09585e+11
+4                                       sm__warps_active.sum                                                                                4.2315e+10
+5                                       sm__warps_active.sum                                                                                1.09621e+11
+6                                       sm__warps_active.sum                                                                                1.096e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+1                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+2                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+3                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+4                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+5                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+6                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88791e+09
+1                                       sm__cycles_elapsed.sum                                                                              6.88712e+09
+2                                       sm__cycles_elapsed.sum                                                                              6.886e+09
+3                                       sm__cycles_elapsed.sum                                                                              6.89179e+09
+4                                       sm__cycles_elapsed.sum                                                                              9.93395e+08
+5                                       sm__cycles_elapsed.sum                                                                              6.89198e+09
+6                                       sm__cycles_elapsed.sum                                                                              6.88879e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.63827e+08
+1                                       sys__cycles_elapsed.sum                                                                             2.61211e+08
+2                                       sys__cycles_elapsed.sum                                                                             2.65516e+08
+3                                       sys__cycles_elapsed.sum                                                                             2.66352e+08
+4                                       sys__cycles_elapsed.sum                                                                             3.63831e+07
+5                                       sys__cycles_elapsed.sum                                                                             2.72238e+08
+6                                       sys__cycles_elapsed.sum                                                                             2.67217e+08
+0                                       dram__sectors_read.sum                                                                              1.4654e+08
+1                                       dram__sectors_read.sum                                                                              1.54508e+08
+2                                       dram__sectors_read.sum                                                                              1.46616e+08
+3                                       dram__sectors_read.sum                                                                              1.49548e+08
+4                                       dram__sectors_read.sum                                                                              1.09076e+08
+5                                       dram__sectors_read.sum                                                                              1.58937e+08
+6                                       dram__sectors_read.sum                                                                              1.46668e+08
+0                                       dram__sectors_write.sum                                                                             8.86668e+06
+1                                       dram__sectors_write.sum                                                                             8.8634e+06
+2                                       dram__sectors_write.sum                                                                             8.8559e+06
+3                                       dram__sectors_write.sum                                                                             8.86146e+06
+4                                       dram__sectors_write.sum                                                                             460480
+5                                       dram__sectors_write.sum                                                                             8.86336e+06
+6                                       dram__sectors_write.sum                                                                             8.85836e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+1                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+2                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+3                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+4                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+5                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+6                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+1                                       smsp__inst_executed_op_global_red.sum                                                               0
+2                                       smsp__inst_executed_op_global_red.sum                                                               0
+3                                       smsp__inst_executed_op_global_red.sum                                                               0
+4                                       smsp__inst_executed_op_global_red.sum                                                               2.09715e+06
+5                                       smsp__inst_executed_op_global_red.sum                                                               0
+6                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+1                                       sm__inst_executed.sum                                                                               2.05979e+10
+2                                       sm__inst_executed.sum                                                                               2.05979e+10
+3                                       sm__inst_executed.sum                                                                               2.05979e+10
+4                                       sm__inst_executed.sum                                                                               3.37641e+08
+5                                       sm__inst_executed.sum                                                                               2.05979e+10
+6                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+1                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+2                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+3                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+4                                       smsp__inst_executed_pipe_fma.sum                                                                    1.15343e+08
+5                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+6                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+1                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+2                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+3                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+4                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+5                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+6                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+1                                       sm__inst_issued.sum                                                                                 2.05979e+10
+2                                       sm__inst_issued.sum                                                                                 2.05979e+10
+3                                       sm__inst_issued.sum                                                                                 2.05979e+10
+4                                       sm__inst_issued.sum                                                                                 3.37655e+08
+5                                       sm__inst_issued.sum                                                                                 2.05979e+10
+6                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.46538e+08
+1                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.54506e+08
+2                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.46614e+08
+3                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.49546e+08
+4                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.09076e+08
+5                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.58935e+08
+6                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.46669e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+1                                       smsp__warps_launched.sum                                                                            32768
+2                                       smsp__warps_launched.sum                                                                            32768
+3                                       smsp__warps_launched.sum                                                                            32768
+4                                       smsp__warps_launched.sum                                                                            2.09715e+06
+5                                       smsp__warps_launched.sum                                                                            32768
+6                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+1                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+2                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+3                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+4                                       smsp__thread_inst_executed.sum                                                                      1.08045e+10
+5                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+6                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+1                                       smsp__inst_executed_op_local_st.sum                                                                 0
+2                                       smsp__inst_executed_op_local_st.sum                                                                 0
+3                                       smsp__inst_executed_op_local_st.sum                                                                 0
+4                                       smsp__inst_executed_op_local_st.sum                                                                 0
+5                                       smsp__inst_executed_op_local_st.sum                                                                 0
+6                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+1                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+2                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+3                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+4                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+5                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+6                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+1                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+2                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+3                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+4                                       smsp__inst_executed_op_global_st.sum                                                                0
+5                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+6                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+1                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+2                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+3                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+4                                       smsp__inst_executed_op_global_ld.sum                                                                2.7263e+07
+5                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+6                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+100.0%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 100.0%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 100.0%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 100.0%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 100.0%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 100.0%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 100.0%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 100.0%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 100.0%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 100.0%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 100.0%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 100.0%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 100.0%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 100.0%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 100.0%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 100.0%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 100.0%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 100.0%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 100.0%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 100.0%  proc'd: 26 (807 Gflop/s)   errors: 0   temps: 59 C 
+Killing processes with SIGTERM (soft kill)
+
+Context 0x564092bd3a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 7:
+ [durata: 9218 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88236e+09
+1                                       sm__cycles_active.sum                                                                               6.88227e+09
+2                                       sm__cycles_active.sum                                                                               6.8822e+09
+3                                       sm__cycles_active.sum                                                                               6.88227e+09
+4                                       sm__cycles_active.sum                                                                               6.88153e+09
+5                                       sm__cycles_active.sum                                                                               6.88155e+09
+6                                       sm__cycles_active.sum                                                                               6.88146e+09
+0                                       sys__cycles_active.sum                                                                              2.6122e+08
+1                                       sys__cycles_active.sum                                                                              2.66809e+08
+2                                       sys__cycles_active.sum                                                                              2.63928e+08
+3                                       sys__cycles_active.sum                                                                              2.62232e+08
+4                                       sys__cycles_active.sum                                                                              2.63892e+08
+5                                       sys__cycles_active.sum                                                                              2.65839e+08
+6                                       sys__cycles_active.sum                                                                              2.64889e+08
+0                                       sm__warps_active.sum                                                                                1.09593e+11
+1                                       sm__warps_active.sum                                                                                1.09582e+11
+2                                       sm__warps_active.sum                                                                                1.09597e+11
+3                                       sm__warps_active.sum                                                                                1.09587e+11
+4                                       sm__warps_active.sum                                                                                1.09585e+11
+5                                       sm__warps_active.sum                                                                                1.09564e+11
+6                                       sm__warps_active.sum                                                                                1.09581e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+1                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+2                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+3                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+4                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+5                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+6                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88719e+09
+1                                       sm__cycles_elapsed.sum                                                                              6.88471e+09
+2                                       sm__cycles_elapsed.sum                                                                              6.89181e+09
+3                                       sm__cycles_elapsed.sum                                                                              6.8918e+09
+4                                       sm__cycles_elapsed.sum                                                                              6.89048e+09
+5                                       sm__cycles_elapsed.sum                                                                              6.88561e+09
+6                                       sm__cycles_elapsed.sum                                                                              6.89006e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.6122e+08
+1                                       sys__cycles_elapsed.sum                                                                             2.66809e+08
+2                                       sys__cycles_elapsed.sum                                                                             2.63928e+08
+3                                       sys__cycles_elapsed.sum                                                                             2.62232e+08
+4                                       sys__cycles_elapsed.sum                                                                             2.63892e+08
+5                                       sys__cycles_elapsed.sum                                                                             2.65839e+08
+6                                       sys__cycles_elapsed.sum                                                                             2.64889e+08
+0                                       dram__sectors_read.sum                                                                              1.54651e+08
+1                                       dram__sectors_read.sum                                                                              1.51654e+08
+2                                       dram__sectors_read.sum                                                                              1.53449e+08
+3                                       dram__sectors_read.sum                                                                              1.49881e+08
+4                                       dram__sectors_read.sum                                                                              1.4744e+08
+5                                       dram__sectors_read.sum                                                                              1.48075e+08
+6                                       dram__sectors_read.sum                                                                              1.46609e+08
+0                                       dram__sectors_write.sum                                                                             8.86198e+06
+1                                       dram__sectors_write.sum                                                                             8.84348e+06
+2                                       dram__sectors_write.sum                                                                             8.85969e+06
+3                                       dram__sectors_write.sum                                                                             8.85644e+06
+4                                       dram__sectors_write.sum                                                                             8.8682e+06
+5                                       dram__sectors_write.sum                                                                             8.86225e+06
+6                                       dram__sectors_write.sum                                                                             8.85773e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+1                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+2                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+3                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+4                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+5                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+6                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+1                                       smsp__inst_executed_op_global_red.sum                                                               0
+2                                       smsp__inst_executed_op_global_red.sum                                                               0
+3                                       smsp__inst_executed_op_global_red.sum                                                               0
+4                                       smsp__inst_executed_op_global_red.sum                                                               0
+5                                       smsp__inst_executed_op_global_red.sum                                                               0
+6                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+1                                       sm__inst_executed.sum                                                                               2.05979e+10
+2                                       sm__inst_executed.sum                                                                               2.05979e+10
+3                                       sm__inst_executed.sum                                                                               2.05979e+10
+4                                       sm__inst_executed.sum                                                                               2.05979e+10
+5                                       sm__inst_executed.sum                                                                               2.05979e+10
+6                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+1                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+2                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+3                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+4                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+5                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+6                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+1                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+2                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+3                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+4                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+5                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+6                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+1                                       sm__inst_issued.sum                                                                                 2.05979e+10
+2                                       sm__inst_issued.sum                                                                                 2.05979e+10
+3                                       sm__inst_issued.sum                                                                                 2.05979e+10
+4                                       sm__inst_issued.sum                                                                                 2.05979e+10
+5                                       sm__inst_issued.sum                                                                                 2.05979e+10
+6                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.54649e+08
+1                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.51652e+08
+2                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.53447e+08
+3                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.49879e+08
+4                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.47438e+08
+5                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.48073e+08
+6                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.46607e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+1                                       smsp__warps_launched.sum                                                                            32768
+2                                       smsp__warps_launched.sum                                                                            32768
+3                                       smsp__warps_launched.sum                                                                            32768
+4                                       smsp__warps_launched.sum                                                                            32768
+5                                       smsp__warps_launched.sum                                                                            32768
+6                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+1                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+2                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+3                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+4                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+5                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+6                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+1                                       smsp__inst_executed_op_local_st.sum                                                                 0
+2                                       smsp__inst_executed_op_local_st.sum                                                                 0
+3                                       smsp__inst_executed_op_local_st.sum                                                                 0
+4                                       smsp__inst_executed_op_local_st.sum                                                                 0
+5                                       smsp__inst_executed_op_local_st.sum                                                                 0
+6                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+1                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+2                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+3                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+4                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+5                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+6                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+1                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+2                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+3                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+4                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+5                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+6                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+1                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+2                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+3                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+4                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+5                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+6                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+Freed memory for dev 0
+Uninitted cublas
+
+Context 0x564092bd3a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 8:
+:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88298e+09
+1                                       sm__cycles_active.sum                                                                               6.88304e+09
+2                                       sm__cycles_active.sum                                                                               6.8808e+09
+3                                       sm__cycles_active.sum                                                                               9.67517e+08
+0                                       sys__cycles_active.sum                                                                              2.63919e+08
+1                                       sys__cycles_active.sum                                                                              2.66293e+08
+2                                       sys__cycles_active.sum                                                                              2.64321e+08
+3                                       sys__cycles_active.sum                                                                              3.63729e+07
+0                                       sm__warps_active.sum                                                                                1.09594e+11
+1                                       sm__warps_active.sum                                                                                1.09624e+11
+2                                       sm__warps_active.sum                                                                                1.09532e+11
+3                                       sm__warps_active.sum                                                                                4.44385e+10
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+1                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+2                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+3                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88774e+09
+1                                       sm__cycles_elapsed.sum                                                                              6.88648e+09
+2                                       sm__cycles_elapsed.sum                                                                              6.8865e+09
+3                                       sm__cycles_elapsed.sum                                                                              9.93487e+08
+0                                       sys__cycles_elapsed.sum                                                                             2.63919e+08
+1                                       sys__cycles_elapsed.sum                                                                             2.66293e+08
+2                                       sys__cycles_elapsed.sum                                                                             2.64321e+08
+3                                       sys__cycles_elapsed.sum                                                                             3.63729e+07
+0                                       dram__sectors_read.sum                                                                              1.46663e+08
+1                                       dram__sectors_read.sum                                                                              1.4777e+08
+2                                       dram__sectors_read.sum                                                                              1.5064e+08
+3                                       dram__sectors_read.sum                                                                              1.09077e+08
+0                                       dram__sectors_write.sum                                                                             8.86019e+06
+1                                       dram__sectors_write.sum                                                                             8.85351e+06
+2                                       dram__sectors_write.sum                                                                             8.86072e+06
+3                                       dram__sectors_write.sum                                                                             455380
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+1                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+2                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+3                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+1                                       smsp__inst_executed_op_global_red.sum                                                               0
+2                                       smsp__inst_executed_op_global_red.sum                                                               0
+3                                       smsp__inst_executed_op_global_red.sum                                                               2.09715e+06
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+1                                       sm__inst_executed.sum                                                                               2.05979e+10
+2                                       sm__inst_executed.sum                                                                               2.05979e+10
+3                                       sm__inst_executed.sum                                                                               3.37641e+08
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+1                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+2                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+3                                       smsp__inst_executed_pipe_fma.sum                                                                    1.15343e+08
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+1                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+2                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+3                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+1                                       sm__inst_issued.sum                                                                                 2.05979e+10
+2                                       sm__inst_issued.sum                                                                                 2.05979e+10
+3                                       sm__inst_issued.sum                                                                                 3.37655e+08
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.46661e+08
+1                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.47768e+08
+2                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.50638e+08
+3                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.09076e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+1                                       smsp__warps_launched.sum                                                                            32768
+2                                       smsp__warps_launched.sum                                                                            32768
+3                                       smsp__warps_launched.sum                                                                            2.09715e+06
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+1                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+2                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+3                                       smsp__thread_inst_executed.sum                                                                      1.08045e+10
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+1                                       smsp__inst_executed_op_local_st.sum                                                                 0
+2                                       smsp__inst_executed_op_local_st.sum                                                                 0
+3                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+1                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+2                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+3                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+1                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+2                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+3                                       smsp__inst_executed_op_global_st.sum                                                                0
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+1                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+2                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+3                                       smsp__inst_executed_op_global_ld.sum                                                                2.7263e+07
+done
+
+Tested 1 GPUs:
+	GPU 0: OK

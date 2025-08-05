@@ -1,0 +1,91 @@
+GPU 0: NVIDIA GeForce RTX 4060 Laptop GPU (UUID: GPU-1094bb47-f390-6560-0fca-43e993217823)
+Using compare file: ./test-apps/gpu-burn/compare.ptx
+Burning for 300 seconds.
+Requesting metric 'sm__warps_active.avg.pct_of_peak_sustained_active'
+Requesting metric 'l1tex__t_set_accesses_pipe_lsu_mem_global_op_atom.sum'
+Requesting metric 'l1tex__t_set_accesses_pipe_lsu_mem_global_op_red.sum'
+Requesting metric 'smsp__sass_average_branch_targets_threads_uniform.pct'
+Requesting metric 'smsp__inst_executed_pipe_cbu.sum'
+Requesting metric 'smsp__inst_executed_pipe_adu.sum'
+Requesting metric 'smsp__inst_executed_pipe_fp64.avg.pct_of_peak_sustained_active'
+Requesting metric 'dram__bytes_read.sum'
+Requesting metric 'dram__bytes_read.sum.per_second'
+Requesting metric 'dram__throughput.avg.pct_of_peak_sustained_elapsed'
+Requesting metric 'dram__bytes_write.sum'
+Requesting metric 'dram__bytes_write.sum.per_second'
+Requesting metric 'smsp__warps_eligible.sum.per_cycle_active'
+Requesting metric 'l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum'
+Requesting metric 'l1tex__t_sectors_pipe_lsu_mem_global_op_st_lookup_hit.sum'
+Requesting metric 'l1tex__t_sectors_pipe_lsu_mem_global_op_red_lookup_hit.sum'
+Requesting metric 'l1tex__t_sectors_pipe_lsu_mem_global_op_atom_lookup_hit.sum'
+Requesting metric 'l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum'
+Requesting metric 'l1tex__t_sectors_pipe_lsu_mem_global_op_st.sum'
+Requesting metric 'l1tex__t_sectors_pipe_lsu_mem_global_op_red.sum'
+Requesting metric 'l1tex__t_sectors_pipe_lsu_mem_global_op_atom.sum'
+Requesting metric 'smsp__inst_executed.sum'
+Requesting metric 'smsp__sass_thread_inst_executed_op_fp64_pred_on.sum'
+Requesting metric 'smsp__sass_thread_inst_executed_op_integer_pred_on.sum'
+Requesting metric 'smsp__warp_issue_stalled_imc_miss_per_warp_active.pct'
+Requesting metric 'smsp__warp_issue_stalled_short_scoreboard_per_warp_active.pct'
+Requesting metric 'smsp__warp_issue_stalled_wait_per_warp_active.pct'
+Requesting metric 'smsp__warp_issue_stalled_long_scoreboard_per_warp_active.pct'
+Requesting metric 'smsp__warp_issue_stalled_drain_per_warp_active.pct'
+Requesting metric 'smsp__warp_issue_stalled_lg_throttle_per_warp_active.pct'
+Requesting metric 'smsp__warp_issue_stalled_not_selected_per_warp_active.pct'
+Requesting metric 'smsp__warp_issue_stalled_dispatch_stall_per_warp_active.pct'
+Requesting metric 'smsp__warp_issue_stalled_misc_per_warp_active.pct'
+Requesting metric 'smsp__warp_issue_stalled_math_pipe_throttle_per_warp_active.pct'
+Requesting metric 'smsp__warp_issue_stalled_mio_throttle_per_warp_active.pct'
+Requesting metric 'smsp__warp_issue_stalled_sleeping_per_warp_active.pct'
+Requesting metric 'smsp__warp_issue_stalled_barrier_per_warp_active.pct'
+Requesting metric 'smsp__warp_issue_stalled_membar_per_warp_active.pct'
+Requesting metric 'smsp__warp_issue_stalled_tex_throttle_per_warp_active.pct'
+Requesting metric 'smsp__thread_inst_executed_per_inst_executed.ratio'
+Initialized device 0 with 7836 MB of memory (7711 MB available, using 3855 MB of it), using FLOATS
+Results are 268435456 bytes each, thus performing 13 iterations
+
+Context 0x556211e8b510, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 1:
+ [durata: 2025-05-12 15:38:13.117 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__warps_active.avg.pct_of_peak_sustained_active                                                   33.1843
+0                                       l1tex__t_set_accesses_pipe_lsu_mem_global_op_atom.sum                                               0
+0                                       l1tex__t_set_accesses_pipe_lsu_mem_global_op_red.sum                                                0
+0                                       smsp__sass_average_branch_targets_threads_uniform.pct                                               100
+0                                       smsp__inst_executed_pipe_cbu.sum                                                                    557056
+0                                       smsp__inst_executed_pipe_adu.sum                                                                    3.46685e+07
+0                                       smsp__inst_executed_pipe_fp64.avg.pct_of_peak_sustained_active                                      0
+0                                       dram__bytes_read.sum                                                                                5.371e+09
+0                                       dram__bytes_read.sum.per_second                                                                     2.31601e+10
+0                                       dram__throughput.avg.pct_of_peak_sustained_elapsed                                                  13.1749
+0                                       dram__bytes_write.sum                                                                               2.86199e+08
+0                                       dram__bytes_write.sum.per_second                                                                    1.23411e+09
+0                                       smsp__warps_eligible.sum.per_cycle_active                                                           215.943
+0                                       l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum                                           1.57668e+07
+0                                       l1tex__t_sectors_pipe_lsu_mem_global_op_st_lookup_hit.sum                                           0
+0                                       l1tex__t_sectors_pipe_lsu_mem_global_op_red_lookup_hit.sum                                          0
+0                                       l1tex__t_sectors_pipe_lsu_mem_global_op_atom_lookup_hit.sum                                         0
+0                                       l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum                                                      2.14748e+09
+0                                       l1tex__t_sectors_pipe_lsu_mem_global_op_st.sum                                                      8.38861e+06
+0                                       l1tex__t_sectors_pipe_lsu_mem_global_op_red.sum                                                     0
+0                                       l1tex__t_sectors_pipe_lsu_mem_global_op_atom.sum                                                    0
+0                                       smsp__inst_executed.sum                                                                             2.05979e+10
+0                                       smsp__sass_thread_inst_executed_op_fp64_pred_on.sum                                                 0
+0                                       smsp__sass_thread_inst_executed_op_integer_pred_on.sum                                              3.36803e+10
+0                                       smsp__warp_issue_stalled_imc_miss_per_warp_active.pct                                               0.000339587
+0                                       smsp__warp_issue_stalled_short_scoreboard_per_warp_active.pct                                       0.208888
+0                                       smsp__warp_issue_stalled_wait_per_warp_active.pct                                                   18.653
+0                                       smsp__warp_issue_stalled_long_scoreboard_per_warp_active.pct                                        0.617838
+0                                       smsp__warp_issue_stalled_drain_per_warp_active.pct                                                  0.00084451
+0                                       smsp__warp_issue_stalled_lg_throttle_per_warp_active.pct                                            0.000137363
+0                                       smsp__warp_issue_stalled_not_selected_per_warp_active.pct                                           37.6154
+0                                       smsp__warp_issue_stalled_dispatch_stall_per_warp_active.pct                                         18.5716
+0                                       smsp__warp_issue_stalled_misc_per_warp_active.pct                                                   0.0306482
+0                                       smsp__warp_issue_stalled_math_pipe_throttle_per_warp_active.pct                                     0.638668
+0                                       smsp__warp_issue_stalled_mio_throttle_per_warp_active.pct                                           0.744614
+0                                       smsp__warp_issue_stalled_sleeping_per_warp_active.pct                                               0
+0                                       smsp__warp_issue_stalled_barrier_per_warp_active.pct                                                3.49473
+0                                       smsp__warp_issue_stalled_membar_per_warp_active.pct                                                 0
+0                                       smsp__warp_issue_stalled_tex_throttle_per_warp_active.pct                                           0
+0                                       smsp__thread_inst_executed_per_inst_executed.ratio                                                  32

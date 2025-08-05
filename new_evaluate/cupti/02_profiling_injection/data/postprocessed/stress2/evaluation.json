@@ -1,0 +1,27 @@
+{
+    "rora": {
+        "Global hit rate": 0.9959811535199355,
+        "L2 hit rate by read instruction": 99.9975,
+        "L2 hit rate by write instruction": 100.0,
+        "Executed instructions": 2.5390725,
+        "Instruction throughput": 66.2394,
+        "Issued instructions": 52.4403,
+        "Read Bytes": 0.0,
+        "Written bytes": 7188500.0,
+        "Memory Stall": 10.546641000000001,
+        "Controller Stall": 7.566775714285716,
+        "Throttle Stall": 19.4581455671,
+        "Steady Temp °C": [
+            NaN
+        ],
+        "Energy spent J/min": [
+            4223.8175999987125
+        ],
+        "Clock Frequency MHz": [
+            2724.0476190476193
+        ],
+        "response (s)": [
+            126
+        ]
+    }
+}

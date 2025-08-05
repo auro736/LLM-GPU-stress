@@ -1,0 +1,2 @@
+timestamp_ns,gpu_index,name,temperature_C,util_gpu_percent,util_mem_percent,mem_total_MB,mem_used_MB,mem_free_MB,clock_sm_MHz,clock_mem_MHz,clock_graphics_MHz,fan_speed_percent,power_draw_W,ecc_volatile_corrected,ecc_volatile_uncorrected,ecc_aggregate_corrected,ecc_aggregate_uncorrected
+17897777510234,0,NVIDIA GeForce RTX 4060 Laptop GPU,51,0,0,8188,353,7835,2040,7000,2040,-1,16.876,-1,-1,-1,-1

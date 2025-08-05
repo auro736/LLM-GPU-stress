@@ -1,0 +1,21 @@
+WG size of kernel = 16 X 16
+Requesting metric 'gpc__cycles_elapsed.avg.per_second'
+Requesting metric 'gr__cycles_active.sum.pct_of_peak_sustained_elapsed'
+Requesting metric 'tpc__warps_active_realtime.avg.pct_of_peak_sustained_elapsed'
+Requesting metric 'sm__cycles_active.avg.pct_of_peak_sustained_elapsed'
+Requesting metric 'sm__inst_executed.avg.pct_of_peak_sustained_elapsed'
+Requesting metric 'sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_elapsed'
+Requesting metric 'dramc__sectors_op_read.avg.pct_of_peak_sustained_elapsed'
+Requesting metric 'dramc__sectors_op_write.avg.pct_of_peak_sustained_elapsed'
+Requesting metric 'pcie__read_bytes.avg.pct_of_peak_sustained_elapsed'
+Requesting metric 'pcie__write_bytes.avg.pct_of_peak_sustained_elapsed'
+Requesting metric 'pcie__read_bytes.sum'
+Requesting metric 'pcie__write_bytes.sum'
+Randomizing the input matrix
+Start the SRAD main loop
+
+Context 0x5596a38f6230, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 1:
+ [durata: 52 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------

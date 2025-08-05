@@ -1,0 +1,1449 @@
+GPU 0: NVIDIA GeForce RTX 4060 Laptop GPU (UUID: GPU-1094bb47-f390-6560-0fca-43e993217823)
+Using compare file: ./test-apps/gpu-burn/compare.ptx
+Burning for 60 seconds.
+Requesting metric 'sm__cycles_active.sum'
+Requesting metric 'sys__cycles_active.sum'
+Requesting metric 'sm__warps_active.sum'
+Requesting metric 'smsp__inst_executed_op_generic_atom_dot_alu.sum'
+Requesting metric 'sm__cycles_elapsed.sum'
+Requesting metric 'sys__cycles_elapsed.sum'
+Requesting metric 'dram__sectors_read.sum'
+Requesting metric 'dram__sectors_write.sum'
+Requesting metric 'smsp__inst_executed_op_generic_atom_dot_cas.sum'
+Requesting metric 'smsp__inst_executed_op_global_red.sum'
+Requesting metric 'sm__inst_executed.sum'
+Requesting metric 'smsp__inst_executed_pipe_fma.sum'
+Requesting metric 'smsp__inst_executed_pipe_fp64.sum'
+Requesting metric 'sm__inst_issued.sum'
+Requesting metric 'lts__t_sectors_op_read_lookup_miss.sum'
+Requesting metric 'smsp__warps_launched.sum'
+Requesting metric 'smsp__thread_inst_executed.sum'
+Requesting metric 'smsp__inst_executed_op_local_st.sum'
+Requesting metric 'smsp__inst_executed_op_local_ld.sum'
+Requesting metric 'smsp__inst_executed_op_global_st.sum'
+Requesting metric 'smsp__inst_executed_op_global_ld.sum'
+Initialized device 0 with 7836 MB of memory (7711 MB available, using 3855 MB of it), using FLOATS
+Results are 268435456 bytes each, thus performing 13 iterations
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 1:
+ [durata: 1278 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88386e+09
+0                                       sys__cycles_active.sum                                                                              2.69812e+08
+0                                       sm__warps_active.sum                                                                                1.09629e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.89662e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.69812e+08
+0                                       dram__sectors_read.sum                                                                              1.44004e+08
+0                                       dram__sectors_write.sum                                                                             8.89143e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.44003e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 2:
+ [durata: 1307 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88229e+09
+0                                       sys__cycles_active.sum                                                                              2.66881e+08
+0                                       sm__warps_active.sum                                                                                1.09596e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88719e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.66881e+08
+0                                       dram__sectors_read.sum                                                                              1.52734e+08
+0                                       dram__sectors_write.sum                                                                             8.86082e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.52735e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 3:
+ [durata: 1295 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88304e+09
+0                                       sys__cycles_active.sum                                                                              2.66697e+08
+0                                       sm__warps_active.sum                                                                                1.096e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88763e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.66697e+08
+0                                       dram__sectors_read.sum                                                                              1.54004e+08
+0                                       dram__sectors_write.sum                                                                             8.87059e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.54005e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 4:
+ [durata: 1306 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88148e+09
+0                                       sys__cycles_active.sum                                                                              2.68756e+08
+0                                       sm__warps_active.sum                                                                                1.09611e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88846e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.68756e+08
+0                                       dram__sectors_read.sum                                                                              1.54546e+08
+0                                       dram__sectors_write.sum                                                                             8.86526e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.54544e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 5:
+ [durata: 1303 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88302e+09
+0                                       sys__cycles_active.sum                                                                              2.65737e+08
+0                                       sm__warps_active.sum                                                                                1.09612e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88834e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.65737e+08
+0                                       dram__sectors_read.sum                                                                              1.47443e+08
+0                                       dram__sectors_write.sum                                                                             8.86063e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.47443e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 6:
+ [durata: 1281 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88315e+09
+0                                       sys__cycles_active.sum                                                                              2.60851e+08
+0                                       sm__warps_active.sum                                                                                1.09625e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88717e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.60851e+08
+0                                       dram__sectors_read.sum                                                                              1.51192e+08
+0                                       dram__sectors_write.sum                                                                             8.85582e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.51192e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 7:
+ [durata: 1310 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88308e+09
+0                                       sys__cycles_active.sum                                                                              2.67963e+08
+0                                       sm__warps_active.sum                                                                                1.09606e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88816e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.67963e+08
+0                                       dram__sectors_read.sum                                                                              1.56753e+08
+0                                       dram__sectors_write.sum                                                                             8.87444e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.56753e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 8:
+ [durata: 1265 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88219e+09
+0                                       sys__cycles_active.sum                                                                              2.67537e+08
+0                                       sm__warps_active.sum                                                                                1.09608e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.89162e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.67537e+08
+0                                       dram__sectors_read.sum                                                                              1.50466e+08
+0                                       dram__sectors_write.sum                                                                             8.86999e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.50468e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 9:
+ [durata: 1306 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88157e+09
+0                                       sys__cycles_active.sum                                                                              2.6489e+08
+0                                       sm__warps_active.sum                                                                                1.09569e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88552e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.6489e+08
+0                                       dram__sectors_read.sum                                                                              1.49333e+08
+0                                       dram__sectors_write.sum                                                                             8.85849e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.49334e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 10:
+ [durata: 1312 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.8831e+09
+0                                       sys__cycles_active.sum                                                                              2.67466e+08
+0                                       sm__warps_active.sum                                                                                1.09567e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88732e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.67466e+08
+0                                       dram__sectors_read.sum                                                                              1.51804e+08
+0                                       dram__sectors_write.sum                                                                             8.86247e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.51804e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 11:
+ [durata: 1342 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88153e+09
+0                                       sys__cycles_active.sum                                                                              2.677e+08
+0                                       sm__warps_active.sum                                                                                1.09589e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88723e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.677e+08
+0                                       dram__sectors_read.sum                                                                              1.50034e+08
+0                                       dram__sectors_write.sum                                                                             8.86303e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.50033e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 12:
+ [durata: 1312 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88307e+09
+0                                       sys__cycles_active.sum                                                                              2.66581e+08
+0                                       sm__warps_active.sum                                                                                1.09599e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88999e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.66581e+08
+0                                       dram__sectors_read.sum                                                                              1.46346e+08
+0                                       dram__sectors_write.sum                                                                             8.8657e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.46344e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 13:
+ [durata: 1891 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88264e+09
+0                                       sys__cycles_active.sum                                                                              2.67873e+08
+0                                       sm__warps_active.sum                                                                                1.09587e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.89194e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.67873e+08
+0                                       dram__sectors_read.sum                                                                              1.49373e+08
+0                                       dram__sectors_write.sum                                                                             8.87217e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.49377e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 14:
+ [durata: 1281 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88306e+09
+0                                       sys__cycles_active.sum                                                                              2.69496e+08
+0                                       sm__warps_active.sum                                                                                1.09581e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88959e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.69496e+08
+0                                       dram__sectors_read.sum                                                                              1.48006e+08
+0                                       dram__sectors_write.sum                                                                             8.87504e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.48007e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 15:
+ [durata: 1282 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88059e+09
+0                                       sys__cycles_active.sum                                                                              2.66435e+08
+0                                       sm__warps_active.sum                                                                                1.09587e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.8869e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.66435e+08
+0                                       dram__sectors_read.sum                                                                              1.49265e+08
+0                                       dram__sectors_write.sum                                                                             8.86526e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.49267e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 16:
+ [durata: 1293 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88157e+09
+0                                       sys__cycles_active.sum                                                                              2.6747e+08
+0                                       sm__warps_active.sum                                                                                1.09576e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.89159e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.6747e+08
+0                                       dram__sectors_read.sum                                                                              1.49457e+08
+0                                       dram__sectors_write.sum                                                                             8.87168e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.49456e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 17:
+ [durata: 1304 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88225e+09
+0                                       sys__cycles_active.sum                                                                              2.65903e+08
+0                                       sm__warps_active.sum                                                                                1.09579e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.8889e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.65903e+08
+0                                       dram__sectors_read.sum                                                                              1.48816e+08
+0                                       dram__sectors_write.sum                                                                             8.86787e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.48816e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 18:
+ [durata: 1285 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88315e+09
+0                                       sys__cycles_active.sum                                                                              2.60693e+08
+0                                       sm__warps_active.sum                                                                                1.09601e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88794e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.60693e+08
+0                                       dram__sectors_read.sum                                                                              1.5135e+08
+0                                       dram__sectors_write.sum                                                                             8.86176e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.51349e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 19:
+ [durata: 1211 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88453e+09
+0                                       sys__cycles_active.sum                                                                              2.61549e+08
+0                                       sm__warps_active.sum                                                                                1.09616e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88934e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.61549e+08
+0                                       dram__sectors_read.sum                                                                              1.52621e+08
+0                                       dram__sectors_write.sum                                                                             8.86006e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.5262e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 20:
+ [durata: 1324 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88386e+09
+0                                       sys__cycles_active.sum                                                                              2.69888e+08
+0                                       sm__warps_active.sum                                                                                1.09625e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.89028e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.69888e+08
+0                                       dram__sectors_read.sum                                                                              1.49354e+08
+0                                       dram__sectors_write.sum                                                                             8.85983e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.49352e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 21:
+ [durata: 1297 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88226e+09
+0                                       sys__cycles_active.sum                                                                              2.69107e+08
+0                                       sm__warps_active.sum                                                                                1.09592e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88765e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.69107e+08
+0                                       dram__sectors_read.sum                                                                              1.47187e+08
+0                                       dram__sectors_write.sum                                                                             8.86008e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.47189e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 22:
+ [durata: 1292 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88214e+09
+0                                       sys__cycles_active.sum                                                                              2.65722e+08
+0                                       sm__warps_active.sum                                                                                1.09611e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.89117e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.65722e+08
+0                                       dram__sectors_read.sum                                                                              1.47553e+08
+0                                       dram__sectors_write.sum                                                                             8.86692e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.47552e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 23:
+ [durata: 1298 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.8846e+09
+0                                       sys__cycles_active.sum                                                                              2.67317e+08
+0                                       sm__warps_active.sum                                                                                1.09642e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88774e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.67317e+08
+0                                       dram__sectors_read.sum                                                                              1.50276e+08
+0                                       dram__sectors_write.sum                                                                             8.86468e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.50277e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 24:
+ [durata: 1298 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.8815e+09
+0                                       sys__cycles_active.sum                                                                              2.67623e+08
+0                                       sm__warps_active.sum                                                                                1.09572e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.89291e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.67623e+08
+0                                       dram__sectors_read.sum                                                                              1.57271e+08
+0                                       dram__sectors_write.sum                                                                             8.86648e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.5727e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 25:
+ [durata: 1297 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88225e+09
+0                                       sys__cycles_active.sum                                                                              2.66979e+08
+0                                       sm__warps_active.sum                                                                                1.09566e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88654e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.66979e+08
+0                                       dram__sectors_read.sum                                                                              1.5452e+08
+0                                       dram__sectors_write.sum                                                                             8.8471e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.54519e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+Using compare file: ./test-apps/gpu-burn/compare.ptx
+Burning for 60 seconds.
+61.7%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 54 C 
+	Summary at:   ven 18 apr 2025, 14:33:48, CEST
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 26:
+ [durata: 1754 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.8807e+09
+0                                       sys__cycles_active.sum                                                                              2.66126e+08
+0                                       sm__warps_active.sum                                                                                1.09586e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88881e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.66126e+08
+0                                       dram__sectors_read.sum                                                                              1.49614e+08
+0                                       dram__sectors_write.sum                                                                             8.85986e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.49614e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 27:
+ [durata: 1272 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88301e+09
+0                                       sys__cycles_active.sum                                                                              2.6899e+08
+0                                       sm__warps_active.sum                                                                                1.09625e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.89074e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.6899e+08
+0                                       dram__sectors_read.sum                                                                              1.48988e+08
+0                                       dram__sectors_write.sum                                                                             8.8682e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.48986e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 28:
+ [durata: 1309 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.8829e+09
+0                                       sys__cycles_active.sum                                                                              2.64643e+08
+0                                       sm__warps_active.sum                                                                                1.09609e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88655e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.64643e+08
+0                                       dram__sectors_read.sum                                                                              1.47548e+08
+0                                       dram__sectors_write.sum                                                                             8.87038e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.47554e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+66.7%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 54 C 66.7%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 54 C 66.7%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 54 C 66.7%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 54 C 66.7%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 54 C 66.7%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 54 C 66.7%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 54 C 66.7%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 54 C 66.7%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 54 C 66.7%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 54 C 66.7%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 56 C 66.7%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 56 C 66.7%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 56 C 66.7%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 56 C 66.7%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 56 C 66.7%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 56 C 66.7%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 56 C 66.7%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 56 C 66.7%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 56 C 
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 29:
+ [durata: 1305 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88301e+09
+0                                       sys__cycles_active.sum                                                                              2.70167e+08
+0                                       sm__warps_active.sum                                                                                1.09613e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.89023e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.70167e+08
+0                                       dram__sectors_read.sum                                                                              1.46326e+08
+0                                       dram__sectors_write.sum                                                                             8.87091e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.46328e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 30:
+ [durata: 1303 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88219e+09
+0                                       sys__cycles_active.sum                                                                              2.65878e+08
+0                                       sm__warps_active.sum                                                                                1.0961e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88764e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.65878e+08
+0                                       dram__sectors_read.sum                                                                              1.49986e+08
+0                                       dram__sectors_write.sum                                                                             8.86907e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.49985e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 31:
+ [durata: 1315 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88372e+09
+0                                       sys__cycles_active.sum                                                                              2.63559e+08
+0                                       sm__warps_active.sum                                                                                1.09619e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.89205e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.63559e+08
+0                                       dram__sectors_read.sum                                                                              1.49712e+08
+0                                       dram__sectors_write.sum                                                                             8.86264e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.49716e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 32:
+ [durata: 1300 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88069e+09
+0                                       sys__cycles_active.sum                                                                              2.6569e+08
+0                                       sm__warps_active.sum                                                                                1.09569e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88982e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.6569e+08
+0                                       dram__sectors_read.sum                                                                              1.47227e+08
+0                                       dram__sectors_write.sum                                                                             8.865e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.47227e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+75.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 56 C 
+	Summary at:   ven 18 apr 2025, 14:33:56, CEST
+
+75.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 56 C 75.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 56 C 75.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 56 C 75.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 56 C 75.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 56 C 75.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 56 C 75.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 56 C 75.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 56 C 75.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 56 C 75.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 75.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 75.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 75.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 75.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 75.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 75.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 75.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 75.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 33:
+ [durata: 1291 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.8808e+09
+0                                       sys__cycles_active.sum                                                                              2.68359e+08
+0                                       sm__warps_active.sum                                                                                1.09586e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.8922e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.68359e+08
+0                                       dram__sectors_read.sum                                                                              1.52868e+08
+0                                       dram__sectors_write.sum                                                                             8.86273e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.52866e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 34:
+ [durata: 1305 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88466e+09
+0                                       sys__cycles_active.sum                                                                              2.64356e+08
+0                                       sm__warps_active.sum                                                                                1.09618e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88658e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.64356e+08
+0                                       dram__sectors_read.sum                                                                              1.54732e+08
+0                                       dram__sectors_write.sum                                                                             8.85669e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.54736e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 35:
+ [durata: 1291 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88302e+09
+0                                       sys__cycles_active.sum                                                                              2.64577e+08
+0                                       sm__warps_active.sum                                                                                1.09618e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88571e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.64577e+08
+0                                       dram__sectors_read.sum                                                                              1.48724e+08
+0                                       dram__sectors_write.sum                                                                             8.84676e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.48724e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 36:
+ [durata: 1299 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88157e+09
+0                                       sys__cycles_active.sum                                                                              2.65289e+08
+0                                       sm__warps_active.sum                                                                                1.09563e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88971e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.65289e+08
+0                                       dram__sectors_read.sum                                                                              1.47952e+08
+0                                       dram__sectors_write.sum                                                                             8.86352e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.4795e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+83.3%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 83.3%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 83.3%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 83.3%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 83.3%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 83.3%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 83.3%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 83.3%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 83.3%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 83.3%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 83.3%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 83.3%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 85.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 85.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 85.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 85.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 85.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 85.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 85.0%  proc'd: 13 (394 Gflop/s)   errors: 0   temps: 57 C 
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 37:
+ [durata: 1296 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88228e+09
+0                                       sys__cycles_active.sum                                                                              2.67098e+08
+0                                       sm__warps_active.sum                                                                                1.09589e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.89192e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.67098e+08
+0                                       dram__sectors_read.sum                                                                              1.51147e+08
+0                                       dram__sectors_write.sum                                                                             8.86708e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.51153e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 38:
+ [durata: 1311 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88447e+09
+0                                       sys__cycles_active.sum                                                                              2.65901e+08
+0                                       sm__warps_active.sum                                                                                1.09667e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88971e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.65901e+08
+0                                       dram__sectors_read.sum                                                                              1.48312e+08
+0                                       dram__sectors_write.sum                                                                             8.86967e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.48312e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+91.7%  proc'd: 26 (794 Gflop/s)   errors: 0   temps: 57 C 
+	Summary at:   ven 18 apr 2025, 14:34:06, CEST
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 39:
+ [durata: 1776 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88139e+09
+0                                       sys__cycles_active.sum                                                                              2.66212e+08
+0                                       sm__warps_active.sum                                                                                1.09585e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.89067e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.66212e+08
+0                                       dram__sectors_read.sum                                                                              1.49717e+08
+0                                       dram__sectors_write.sum                                                                             8.8676e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.49715e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+93.3%  proc'd: 26 (794 Gflop/s)   errors: 0   temps: 57 C 93.3%  proc'd: 26 (794 Gflop/s)   errors: 0   temps: 57 C 93.3%  proc'd: 26 (794 Gflop/s)   errors: 0   temps: 57 C 93.3%  proc'd: 26 (794 Gflop/s)   errors: 0   temps: 57 C 93.3%  proc'd: 26 (794 Gflop/s)   errors: 0   temps: 57 C 93.3%  proc'd: 26 (794 Gflop/s)   errors: 0   temps: 57 C 93.3%  proc'd: 26 (794 Gflop/s)   errors: 0   temps: 57 C 93.3%  proc'd: 26 (794 Gflop/s)   errors: 0   temps: 57 C 93.3%  proc'd: 26 (794 Gflop/s)   errors: 0   temps: 57 C 93.3%  proc'd: 26 (794 Gflop/s)   errors: 0   temps: 57 C 93.3%  proc'd: 26 (794 Gflop/s)   errors: 0   temps: 57 C 93.3%  proc'd: 26 (794 Gflop/s)   errors: 0   temps: 57 C 93.3%  proc'd: 26 (794 Gflop/s)   errors: 0   temps: 57 C 93.3%  proc'd: 26 (794 Gflop/s)   errors: 0   temps: 57 C 93.3%  proc'd: 26 (794 Gflop/s)   errors: 0   temps: 57 C 93.3%  proc'd: 26 (794 Gflop/s)   errors: 0   temps: 57 C 93.3%  proc'd: 26 (794 Gflop/s)   errors: 0   temps: 57 C 93.3%  proc'd: 26 (794 Gflop/s)   errors: 0   temps: 57 C 93.3%  proc'd: 26 (794 Gflop/s)   errors: 0   temps: 57 C 
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 40:
+ [durata: 1272 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88223e+09
+0                                       sys__cycles_active.sum                                                                              2.6909e+08
+0                                       sm__warps_active.sum                                                                                1.09568e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.8888e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.6909e+08
+0                                       dram__sectors_read.sum                                                                              1.43768e+08
+0                                       dram__sectors_write.sum                                                                             8.86173e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.43767e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 41:
+ [durata: 1299 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88303e+09
+0                                       sys__cycles_active.sum                                                                              2.65518e+08
+0                                       sm__warps_active.sum                                                                                1.09606e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88815e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.65518e+08
+0                                       dram__sectors_read.sum                                                                              1.45973e+08
+0                                       dram__sectors_write.sum                                                                             8.86328e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.45976e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 42:
+ [durata: 1322 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88304e+09
+0                                       sys__cycles_active.sum                                                                              2.65644e+08
+0                                       sm__warps_active.sum                                                                                1.09596e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.89025e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.65644e+08
+0                                       dram__sectors_read.sum                                                                              1.47175e+08
+0                                       dram__sectors_write.sum                                                                             8.87034e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.47176e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 43:
+ [durata: 1303 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.8822e+09
+0                                       sys__cycles_active.sum                                                                              2.67647e+08
+0                                       sm__warps_active.sum                                                                                1.09589e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88895e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.67647e+08
+0                                       dram__sectors_read.sum                                                                              1.46688e+08
+0                                       dram__sectors_write.sum                                                                             8.8603e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.46686e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+100.0%  proc'd: 26 (794 Gflop/s)   errors: 0   temps: 57 C 
+Killing processes with SIGTERM (soft kill)
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 44:
+ [durata: 1319 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88298e+09
+0                                       sys__cycles_active.sum                                                                              2.65519e+08
+0                                       sm__warps_active.sum                                                                                1.09588e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88824e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.65519e+08
+0                                       dram__sectors_read.sum                                                                              1.50387e+08
+0                                       dram__sectors_write.sum                                                                             8.87281e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.50396e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 45:
+ [durata: 1313 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88218e+09
+0                                       sys__cycles_active.sum                                                                              2.63429e+08
+0                                       sm__warps_active.sum                                                                                1.09596e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88745e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.63429e+08
+0                                       dram__sectors_read.sum                                                                              1.47765e+08
+0                                       dram__sectors_write.sum                                                                             8.86578e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.47766e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 46:
+ [durata: 1296 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88314e+09
+0                                       sys__cycles_active.sum                                                                              2.66814e+08
+0                                       sm__warps_active.sum                                                                                1.09602e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88641e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.66814e+08
+0                                       dram__sectors_read.sum                                                                              1.46516e+08
+0                                       dram__sectors_write.sum                                                                             8.86106e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.46514e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 47:
+ [durata: 1300 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88295e+09
+0                                       sys__cycles_active.sum                                                                              2.63529e+08
+0                                       sm__warps_active.sum                                                                                1.096e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88607e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.63529e+08
+0                                       dram__sectors_read.sum                                                                              1.49522e+08
+0                                       dram__sectors_write.sum                                                                             8.8711e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.49527e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 48:
+ [durata: 1298 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.8822e+09
+0                                       sys__cycles_active.sum                                                                              2.66825e+08
+0                                       sm__warps_active.sum                                                                                1.09592e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.8859e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.66825e+08
+0                                       dram__sectors_read.sum                                                                              1.53048e+08
+0                                       dram__sectors_write.sum                                                                             8.86362e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.53048e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 49:
+ [durata: 1292 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88535e+09
+0                                       sys__cycles_active.sum                                                                              2.66544e+08
+0                                       sm__warps_active.sum                                                                                1.09674e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.89246e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.66544e+08
+0                                       dram__sectors_read.sum                                                                              1.54146e+08
+0                                       dram__sectors_write.sum                                                                             8.87192e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.54145e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 50:
+ [durata: 1303 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88222e+09
+0                                       sys__cycles_active.sum                                                                              2.6742e+08
+0                                       sm__warps_active.sum                                                                                1.09584e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88732e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.6742e+08
+0                                       dram__sectors_read.sum                                                                              1.51699e+08
+0                                       dram__sectors_write.sum                                                                             8.8593e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.51702e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 51:
+ [durata: 1280 ms]:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88369e+09
+0                                       sys__cycles_active.sum                                                                              2.66538e+08
+0                                       sm__warps_active.sum                                                                                1.09632e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88869e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.66538e+08
+0                                       dram__sectors_read.sum                                                                              1.45956e+08
+0                                       dram__sectors_write.sum                                                                             8.86038e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.45956e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+Freed memory for dev 0
+Uninitted cublas
+
+Context 0x55acf03c4a00, device 0 (NVIDIA GeForce RTX 4060 Laptop GPU) session 52:
+:
+
+Range Name                              Metric Name                                                                                         Metric Value
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0                                       sm__cycles_active.sum                                                                               6.88304e+09
+0                                       sys__cycles_active.sum                                                                              2.66824e+08
+0                                       sm__warps_active.sum                                                                                1.09593e+11
+0                                       smsp__inst_executed_op_generic_atom_dot_alu.sum                                                     0
+0                                       sm__cycles_elapsed.sum                                                                              6.88939e+09
+0                                       sys__cycles_elapsed.sum                                                                             2.66824e+08
+0                                       dram__sectors_read.sum                                                                              1.45519e+08
+0                                       dram__sectors_write.sum                                                                             8.88034e+06
+0                                       smsp__inst_executed_op_generic_atom_dot_cas.sum                                                     0
+0                                       smsp__inst_executed_op_global_red.sum                                                               0
+0                                       sm__inst_executed.sum                                                                               2.05979e+10
+0                                       smsp__inst_executed_pipe_fma.sum                                                                    1.71823e+10
+0                                       smsp__inst_executed_pipe_fp64.sum                                                                   0
+0                                       sm__inst_issued.sum                                                                                 2.05979e+10
+0                                       lts__t_sectors_op_read_lookup_miss.sum                                                              1.45516e+08
+0                                       smsp__warps_launched.sum                                                                            32768
+0                                       smsp__thread_inst_executed.sum                                                                      6.59132e+11
+0                                       smsp__inst_executed_op_local_st.sum                                                                 0
+0                                       smsp__inst_executed_op_local_ld.sum                                                                 0
+0                                       smsp__inst_executed_op_global_st.sum                                                                2.12992e+06
+0                                       smsp__inst_executed_op_global_ld.sum                                                                5.37723e+08
+done
+
+Tested 1 GPUs:
+	GPU 0: OK
