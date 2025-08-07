@@ -42,9 +42,13 @@ def get_system_prompt(mode):
 def get_user_prompt(mode):
     if mode == 'zero-shot':
         # da checkare cosa chiedere nei dettagli, o fare diversi prompt
+        # return """
+        #            Following your system prompt your target for stressing is: RTX 4060 GPU with CUDA 12 and 8GB VRAM. Enclose code between ```  
+        #         """
         return """
-                   Following your system prompt your target for stressing is: RTX 4060 GPU with CUDA 12 and 8GB VRAM. Enclose code between ```  
-                """
+                   Following your system prompt your target for stressing is: two RTX 6000 Ada generation GPUs with CUDA 12 and 48GB VRAM each. Enclose code between ```  
+            """
+
     elif mode == 'few-shot':
         return """ To be defined """
     else :

@@ -1,52 +1,27 @@
 {
-    "out1754561092": {
+    "out1754574347": {
         "Global hit rate": 0.5,
-        "L2 hit rate by read instruction": 99.997,
+        "L2 hit rate by read instruction": 99.9949,
         "L2 hit rate by write instruction": 100.0,
-        "Executed instructions": 2.4882,
-        "Instruction throughput": 94.6920375,
-        "Issued instructions": 24.1255875,
+        "Executed instructions": 3.399450625,
+        "Instruction throughput": 91.456175,
+        "Issued instructions": 85.2409375,
         "Read Bytes": 0.0,
-        "Written bytes": 634871.25,
-        "Memory Stall": 0.7381831875,
-        "Controller Stall": 9.667593289285714,
-        "Throttle Stall": 19.70554813895,
+        "Written bytes": 0.0,
+        "Memory Stall": 2.84087375,
+        "Controller Stall": 8.989003424999998,
+        "Throttle Stall": 8.774709035,
         "Steady Temp °C": [
             NaN
         ],
         "Energy spent J/min": [
-            8827.241999998689
+            9153.782950820494
         ],
         "Clock Frequency MHz": [
-            2692.622950819672
+            2703.3870967741937
         ],
         "response (s)": [
-            61
-        ]
-    },
-    "rora": {
-        "Global hit rate": 0.9959811535199355,
-        "L2 hit rate by read instruction": 99.9975,
-        "L2 hit rate by write instruction": 100.0,
-        "Executed instructions": 2.5390725,
-        "Instruction throughput": 66.2394,
-        "Issued instructions": 52.4403,
-        "Read Bytes": 0.0,
-        "Written bytes": 7188500.0,
-        "Memory Stall": 10.546641000000001,
-        "Controller Stall": 7.566775714285716,
-        "Throttle Stall": 19.4581455671,
-        "Steady Temp °C": [
-            31.695269788447824
-        ],
-        "Energy spent J/min": [
-            845.8255678670187
-        ],
-        "Clock Frequency MHz": [
-            283.1617816755135
-        ],
-        "response (s)": [
-            355
+            62
         ]
     }
 }

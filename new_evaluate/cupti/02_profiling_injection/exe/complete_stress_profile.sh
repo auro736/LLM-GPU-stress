@@ -69,4 +69,4 @@ done
 
 #### Postprocess csv data to extract, from the generated csvs, the target metrics
 
-python3 exe/scripts/stress_postprocess.py --performance $PERFORMANCE  
+python3 exe/scripts/stress_postprocess.py --performance $PERFORMANCE  --app $APP

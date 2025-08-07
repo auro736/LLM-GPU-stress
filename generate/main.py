@@ -28,6 +28,7 @@ def main():
                 ]
     # maybe add into user prompt or here as var the duration time of the test
     # or say alway to add a user input to define test duration
+    # CONTROLALRE TEST DURATION = QUANTO DEVE GIRARE IL CODICE
 
     model = TogetherModel(model_name=args.model, api_key=args.together_api_key)
     answer = model.generate(messages=messages, temperature=0.5, max_new_tokens=None, seed=4899)
@@ -82,13 +83,13 @@ def main():
                                  model=model)
         # controlla poi prompt per correzioni codici
 
-   
+
 
     profiling_bash_template = './utils/profiling_bash_template'
     with open(os.path.join(profiling_bash_template,"template.sh"), "r") as f:
         content = f.read()
     
-    content = content.replace("./test-apps/rora/rora 60", f"./test-apps/{file_name}/{file_name}")
+    content = content.replace("./test-apps/rora/rora 60", f"./test-apps/{file_name}/{file_name} 60")
     content = content.replace("data/raw/stress2/rora_$INJECTION_KERNEL_COUNT.txt", f"data/raw/stress2/{file_name}_$INJECTION_KERNEL_COUNT.txt")
     
     with open(f"../new_evaluate/cupti/02_profiling_injection/exe/bash/profiling_stress2/{file_name}.sh", "w") as f:
@@ -102,7 +103,7 @@ def main():
     with open(f"../new_evaluate/cupti/02_profiling_injection/exe/bash/postprocessing/{file_name}.sh", "w") as f:
         f.write(content)
 
-    command = ["sudo", "bash", "exe/complete_stress_profile.sh", file_name]
+    command = ["sudo", "bash", f"exe/complete_stress_profile.sh", f"{file_name}"]
     result = subprocess.run(command,
                    capture_output=True,
                    text=True,

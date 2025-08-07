@@ -5,10 +5,10 @@ CUDAPATH := /usr/local/cuda
 NVCC := $(CUDAPATH)/bin/nvcc
 
 # Target executable
-TARGET := out_1754559993
+TARGET := out1754575644
 
 # Source file
-SRC := out_1754559993.cu
+SRC := out_1754575644.cu
 
 # Compiler flags
 NVCCFLAGS := -O3 -std=c++11 -arch=sm_86

@@ -2,11 +2,11 @@
 
 #include <cuda_runtime.h>
 #include <cuda_device_runtime_api.h>
-#include <cuda.h>
+#include <cuda_runtime_api.h>
 #include <device_launch_parameters.h>
+#include <cuda_profiler_api.h>
+#include <cmath>
 #include <iostream>
-#include <chrono>
-#include <thread>
 
 // Define constants
 const int BLOCK_SIZE = 256;
@@ -40,8 +40,20 @@ __global__ void floatingPointKernel(float *array, int size) {
     }
 }
 
+// Define kernel for special functions stressing XU units
+__global__ void specialFunctionsKernel(float *array, int size) {
+    int idx = blockIdx.x * blockDim.x + threadIdx.x;
+    if (idx < size) {
+        float value = array[idx];
+        for (int i = 0; i < 1000; i++) {
+            value = expf(value) * logf(value) * powf(value, 2.0f);
+        }
+        array[idx] = value;
+    }
+}
+
 // Define kernel for atomic operations
-__global__ void atomicKernel(float *array, int size) {
+__global__ void atomicOperationsKernel(float *array, int size) {
     int idx = blockIdx.x * blockDim.x + threadIdx.x;
     if (idx < size) {
         float value = array[idx];
@@ -51,38 +63,22 @@ __global__ void atomicKernel(float *array, int size) {
     }
 }
 
-// Define kernel for L2 cache stress
-__global__ void l2CacheKernel(float *array, int size) {
-    int idx = blockIdx.x * blockDim.x + threadIdx.x;
-    if (idx < size) {
-        float value = array[idx];
-        for (int i = 0; i < 1000; i++) {
-            value = array[(idx + i) % size];
-        }
-        array[idx] = value;
-    }
-}
-
 int main(int argc, char **argv) {
-    // Check command line arguments
-    if (argc != 2) {
-        std::cerr << "Usage: " << argv[0] << " <test_duration_in_seconds>" << std::endl;
-        return 1;
-    }
-
-    int testDuration = std::stoi(argv[1]);
-
     // Initialize CUDA devices
     int numDevices;
     cudaGetDeviceCount(&numDevices);
     for (int i = 0; i < numDevices; i++) {
-        cudaDeviceProp prop;
-        cudaGetDeviceProperties(&prop, i);
-        std::cout << "Device " << i << ": " << prop.name << std::endl;
+        cudaSetDevice(i);
+        cudaDeviceReset();
     }
 
-    // Set device
-    cudaSetDevice(0);
+    // Set test duration
+    int testDuration;
+    if (argc > 1) {
+        testDuration = atoi(argv[1]);
+    } else {
+        testDuration = 60; // default test duration in seconds
+    }
 
     // Allocate host memory
     float *h_A, *h_B, *h_C, *h_array;
@@ -93,10 +89,9 @@ int main(int argc, char **argv) {
 
     // Initialize host memory
     for (int i = 0; i < MATRIX_SIZE * MATRIX_SIZE; i++) {
-        h_A[i] = i;
-        h_B[i] = i;
-        h_C[i] = 0.0f;
-        h_array[i] = i;
+        h_A[i] = (float)rand() / RAND_MAX;
+        h_B[i] = (float)rand() / RAND_MAX;
+        h_array[i] = (float)rand() / RAND_MAX;
     }
 
     // Allocate device memory
@@ -106,39 +101,55 @@ int main(int argc, char **argv) {
     cudaMalloc((void **)&d_C, MATRIX_SIZE * MATRIX_SIZE * sizeof(float));
     cudaMalloc((void **)&d_array, MATRIX_SIZE * MATRIX_SIZE * sizeof(float));
 
-    // Copy data from host to device
+    // Copy host memory to device memory
     cudaMemcpy(d_A, h_A, MATRIX_SIZE * MATRIX_SIZE * sizeof(float), cudaMemcpyHostToDevice);
     cudaMemcpy(d_B, h_B, MATRIX_SIZE * MATRIX_SIZE * sizeof(float), cudaMemcpyHostToDevice);
     cudaMemcpy(d_array, h_array, MATRIX_SIZE * MATRIX_SIZE * sizeof(float), cudaMemcpyHostToDevice);
 
     // Launch kernels
-    auto start = std::chrono::high_resolution_clock::now();
-    while (true) {
-        matrixMultiplyKernel<<<dim3(GRID_SIZE, GRID_SIZE), dim3(BLOCK_SIZE, BLOCK_SIZE)>>>(d_A, d_B, d_C, MATRIX_SIZE);
-        floatingPointKernel<<<dim3(GRID_SIZE), dim3(BLOCK_SIZE)>>>(d_array, MATRIX_SIZE * MATRIX_SIZE);
-        atomicKernel<<<dim3(GRID_SIZE), dim3(BLOCK_SIZE)>>>(d_array, MATRIX_SIZE * MATRIX_SIZE);
-        l2CacheKernel<<<dim3(GRID_SIZE), dim3(BLOCK_SIZE)>>>(d_array, MATRIX_SIZE * MATRIX_SIZE);
+    cudaEvent_t start, stop;
+    cudaEventCreate(&start);
+    cudaEventCreate(&stop);
+    cudaEventRecord(start, 0);
 
-        auto now = std::chrono::high_resolution_clock::now();
-        auto duration = std::chrono::duration_cast<std::chrono::seconds>(now - start).count();
-        if (duration > testDuration) {
+    while (1) {
+        // Launch matrix multiplication kernel
+        dim3 block(BLOCK_SIZE, BLOCK_SIZE);
+        dim3 grid(GRID_SIZE, GRID_SIZE);
+        matrixMultiplyKernel<<<grid, block>>>(d_A, d_B, d_C, MATRIX_SIZE);
+
+        // Launch floating-point calculations kernel
+        block = dim3(BLOCK_SIZE);
+        grid = dim3(GRID_SIZE);
+        floatingPointKernel<<<grid, block>>>(d_array, MATRIX_SIZE * MATRIX_SIZE);
+
+        // Launch special functions kernel
+        floatingPointKernel<<<grid, block>>>(d_array, MATRIX_SIZE * MATRIX_SIZE);
+
+        // Launch atomic operations kernel
+        atomicOperationsKernel<<<grid, block>>>(d_array, MATRIX_SIZE * MATRIX_SIZE);
+
+        // Check test duration
+        cudaEventRecord(stop, 0);
+        cudaEventSynchronize(stop);
+        float elapsed;
+        cudaEventElapsedTime(&elapsed, start, stop);
+        if (elapsed > testDuration) {
             break;
         }
     }
 
-    // Copy data from device to host
-    cudaMemcpy(h_C, d_C, MATRIX_SIZE * MATRIX_SIZE * sizeof(float), cudaMemcpyDeviceToHost);
-    cudaMemcpy(h_array, d_array, MATRIX_SIZE * MATRIX_SIZE * sizeof(float), cudaMemcpyDeviceToHost);
-
-    // Free memory
-    cudaFreeHost(h_A);
-    cudaFreeHost(h_B);
-    cudaFreeHost(h_C);
-    cudaFreeHost(h_array);
+    // Free device memory
     cudaFree(d_A);
     cudaFree(d_B);
     cudaFree(d_C);
     cudaFree(d_array);
+
+    // Free host memory
+    cudaFreeHost(h_A);
+    cudaFreeHost(h_B);
+    cudaFreeHost(h_C);
+    cudaFreeHost(h_array);
 
     return 0;
 }
