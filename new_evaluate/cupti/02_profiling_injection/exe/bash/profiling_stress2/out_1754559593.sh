@@ -47,4 +47,4 @@ export INJECTION_METRICS=$INJECTION_METRICS"smsp__warp_issue_stalled_lg_throttle
 export INJECTION_METRICS=$INJECTION_METRICS"smsp__warp_issue_stalled_drain_per_warp_active.pct " # stall_memory_throttle
 
 
-env CUDA_INJECTION64_PATH=./libinjection.so ./test-apps/out_1754555814/out_1754555814 60 >> data/raw/stress2/out_1754555814_$INJECTION_KERNEL_COUNT.txt
+env CUDA_INJECTION64_PATH=./libinjection.so ./test-apps/out_1754559593/out_1754559593 >> data/raw/stress2/out_1754559593_$INJECTION_KERNEL_COUNT.txt

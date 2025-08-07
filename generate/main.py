@@ -26,7 +26,8 @@ def main():
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt},
                 ]
-    
+    # maybe add into user prompt or here as var the duration time of the test
+    # or say alway to add a user input to define test duration
 
     model = TogetherModel(model_name=args.model, api_key=args.together_api_key)
     answer = model.generate(messages=messages, temperature=0.5, max_new_tokens=None, seed=4899)
@@ -48,7 +49,9 @@ def main():
     except:
         raise Exception("Error while saving {code_type} file")
     
-    file_name = out_file.split('.')[0]
+    # file_name = out_file.split('.')[0]
+    file_name = out_file.split('.')[0].replace('_', '')
+
 
     dir_eval = f'../new_evaluate/cupti/02_profiling_injection/test-apps/{file_name}'
     os.makedirs(dir_eval, exist_ok=True)
@@ -81,15 +84,32 @@ def main():
 
    
 
-    # profiling_bash_template = './utils/profiling_bash_template'
-    # with open(os.path.join(profiling_bash_template,"template.sh"), "r") as f:
-    #     content = f.read()
+    profiling_bash_template = './utils/profiling_bash_template'
+    with open(os.path.join(profiling_bash_template,"template.sh"), "r") as f:
+        content = f.read()
     
-    # content = content.replace("./test-apps/rora/rora", f"./test-apps/{file_name}/{file_name}")
-    # content = content.replace("data/raw/stress2/rora_$INJECTION_KERNEL_COUNT.txt", f"data/raw/stress2/{file_name}_$INJECTION_KERNEL_COUNT.txt")
+    content = content.replace("./test-apps/rora/rora 60", f"./test-apps/{file_name}/{file_name}")
+    content = content.replace("data/raw/stress2/rora_$INJECTION_KERNEL_COUNT.txt", f"data/raw/stress2/{file_name}_$INJECTION_KERNEL_COUNT.txt")
     
-    # with open(f"../new_evaluate/cupti/02_profiling_injection/exe/bash/profiling_stress2/{file_name}.sh", "w") as f:
-    #     f.write(content)
+    with open(f"../new_evaluate/cupti/02_profiling_injection/exe/bash/profiling_stress2/{file_name}.sh", "w") as f:
+        f.write(content)
+
+    postprocessing_bash_template = './utils/postprocessing_bash_template'
+    with open(os.path.join(postprocessing_bash_template,"template.sh"), "r") as f:
+        content = f.read()
+
+    content = content.replace("APP_NAME='rora'", f"APP_NAME='{file_name}'")
+    with open(f"../new_evaluate/cupti/02_profiling_injection/exe/bash/postprocessing/{file_name}.sh", "w") as f:
+        f.write(content)
+
+    command = ["sudo", "bash", "exe/complete_stress_profile.sh", file_name]
+    result = subprocess.run(command,
+                   capture_output=True,
+                   text=True,
+                   cwd="../new_evaluate/cupti/02_profiling_injection/" )
+    
+    print("STDOUT:\n", result.stdout)
+    print("STDERR:\n", result.stderr)
 
 
 

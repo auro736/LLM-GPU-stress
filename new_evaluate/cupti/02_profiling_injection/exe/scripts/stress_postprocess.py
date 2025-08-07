@@ -93,16 +93,18 @@ def main(args):
     
     data_path = f'data/postprocessed/{args.performance}'
     app_names = pd.Series([file.split('_')[0] for file in os.listdir(data_path) if file.endswith('csv')]).unique()
+    print(app_names)
     total_json = {}
     for app in app_names:
         if not app in list(mapping_table.keys()):
             mapping_table[app] = app
         total_json[f'{mapping_table[app]}'] = {}
+        print(mapping_table)
 
         ## Performance counters data processing
         pc_file_name = f'{app}_1.csv'
         pc_file_path = os.path.join(data_path, pc_file_name)
-
+        print(pc_file_path)
         pc_csv = pd.read_csv(pc_file_path)
 
         pc_csv['app'] = mapping_table[f'{app}']
