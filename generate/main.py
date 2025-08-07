@@ -54,7 +54,7 @@ def main():
     file_name = out_file.split('.')[0].replace('_', '')
 
 
-    dir_eval = f'../new_evaluate/cupti/02_profiling_injection/test-apps/{file_name}'
+    dir_eval = f'../evaluate/cupti/02_profiling_injection/test-apps/{file_name}'
     os.makedirs(dir_eval, exist_ok=True)
 
     try:
@@ -92,7 +92,7 @@ def main():
     content = content.replace("./test-apps/rora/rora 60", f"./test-apps/{file_name}/{file_name} 60")
     content = content.replace("data/raw/stress2/rora_$INJECTION_KERNEL_COUNT.txt", f"data/raw/stress2/{file_name}_$INJECTION_KERNEL_COUNT.txt")
     
-    with open(f"../new_evaluate/cupti/02_profiling_injection/exe/bash/profiling_stress2/{file_name}.sh", "w") as f:
+    with open(f"../evaluate/cupti/02_profiling_injection/exe/bash/profiling_stress2/{file_name}.sh", "w") as f:
         f.write(content)
 
     postprocessing_bash_template = './utils/postprocessing_bash_template'
@@ -100,14 +100,14 @@ def main():
         content = f.read()
 
     content = content.replace("APP_NAME='rora'", f"APP_NAME='{file_name}'")
-    with open(f"../new_evaluate/cupti/02_profiling_injection/exe/bash/postprocessing/{file_name}.sh", "w") as f:
+    with open(f"../evaluate/cupti/02_profiling_injection/exe/bash/postprocessing/{file_name}.sh", "w") as f:
         f.write(content)
 
     command = ["sudo", "bash", f"exe/complete_stress_profile.sh", f"{file_name}"]
     result = subprocess.run(command,
                    capture_output=True,
                    text=True,
-                   cwd="../new_evaluate/cupti/02_profiling_injection/" )
+                   cwd="../evaluate/cupti/02_profiling_injection/" )
     
     print("STDOUT:\n", result.stdout)
     print("STDERR:\n", result.stderr)
