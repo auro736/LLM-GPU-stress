@@ -2,6 +2,8 @@ import os
 import subprocess
 from utils.utils import *
 
+from codeParser import codeParser
+
 class Compiler():
     def __init__(self, template_dir):
         self.template_dir = template_dir
@@ -81,15 +83,44 @@ class Compiler():
                 "returncode": -1
             }
         
+    def fix_code(self, timestamp, original_code, stderr, model, system_prompt="You are a helpful compiler assistant. Fix errors in the code."):
+        """
+        Use an LLM to correct the code given the compilation error.
+
+        Args:
+            original_code (str): Initial source code
+            stderr (str): Compilation error output
+            model: LLM model instance (e.g. TogetherModel)
+            system_prompt (str): System prompt
+
+        Returns:
+            str: Corrected code proposed by the model
+        """
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": f"The following code:\n\n{original_code}\n\nGenerated this compilation error:\n\n{stderr}\n\nPlease correct the code."}
+        ]
+        
+        response = model.generate(messages=messages, temperature=0.5, max_new_tokens=None, seed=4899)
+        fixed_code, _ = clean_string(response)
+
+        clean_answer, code_type = clean_string(fixed_code)
+
+        codeParser = codeParser(code_string=clean_answer, code_type=code_type)
+        clean_answer, out_file = codeParser.extract_code_from_output(timestamp=timestamp)
+
+        return clean_answer
+
+        
     def fix_compile(self, max_attempts, attempt, compile_result, save_dir, out_file, timestamp, model):
         
         while not compile_result["success"] and attempt <= max_attempts:
-            print(f"\n Tentativo di correzione #{attempt}...")
+            print(f"\n Tentative #{attempt} to correct code ...")
 
             with open(os.path.join(save_dir, out_file), 'r') as f:
                 original_code = f.read()
 
-            corrected_code = fix_code(
+            corrected_code = self.fix_code(
                 timestamp=timestamp, 
                 original_code=original_code,
                 stderr=compile_result["stderr"],
