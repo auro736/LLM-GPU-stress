@@ -2,11 +2,15 @@ import os
 import subprocess
 from utils.utils import *
 
-from codeParser import codeParser
+from baseAgent import BaseAgent
+from codeParser import CodeParser
 
-class Compiler():
-    def __init__(self, template_dir):
+class CompilingAssistantAgent(BaseAgent):
+
+    def __init__(self, model_type, model_name, api_key, template_dir):
+        super().__init__(model_type, model_name, api_key)
         self.template_dir = template_dir
+        self.system_prompt = """You are a helpful compiler assistant. Fix errors in the code."""
 
     def prepare_makefile(self, file_name, out_file, save_dir):
         with open(os.path.join(self.template_dir,"Makefile"), "r") as f:
@@ -19,7 +23,6 @@ class Compiler():
             f.write(content)
 
         print("Makefile generated successfully.")
-
    
     def compile(self, save_dir):
         try:
@@ -83,7 +86,7 @@ class Compiler():
                 "returncode": -1
             }
         
-    def fix_code(self, timestamp, original_code, stderr, model, system_prompt="You are a helpful compiler assistant. Fix errors in the code."):
+    def fix_code(self, timestamp, original_code, stderr, model, temperature, max_new_tokens, seed):
         """
         Use an LLM to correct the code given the compilation error.
 
@@ -97,22 +100,23 @@ class Compiler():
             str: Corrected code proposed by the model
         """
         messages = [
-            {"role": "system", "content": system_prompt},
+            {"role": "system", "content": self.system_prompt},
             {"role": "user", "content": f"The following code:\n\n{original_code}\n\nGenerated this compilation error:\n\n{stderr}\n\nPlease correct the code."}
         ]
         
-        response = model.generate(messages=messages, temperature=0.5, max_new_tokens=None, seed=4899)
+        response = super().generate(messages=messages, temperature=temperature, max_new_tokens=max_new_tokens, seed=seed)
+        model.generate(messages=messages, temperature=0.5, max_new_tokens=None, seed=4899)
         fixed_code, _ = clean_string(response)
 
         clean_answer, code_type = clean_string(fixed_code)
 
-        codeParser = codeParser(code_string=clean_answer, code_type=code_type)
-        clean_answer, out_file = codeParser.extract_code_from_output(timestamp=timestamp)
+        code_parser = CodeParser(code_string=clean_answer, code_type=code_type)
+        clean_answer, out_file = code_parser.extract_code_from_output(timestamp=timestamp)
 
         return clean_answer
 
         
-    def fix_compile(self, max_attempts, attempt, compile_result, save_dir, out_file, timestamp, model):
+    def fix_compile(self, max_attempts, attempt, compile_result, save_dir, out_file, timestamp, temperature, max_new_tokens, seed):
         
         while not compile_result["success"] and attempt <= max_attempts:
             print(f"\n Tentative #{attempt} to correct code ...")
@@ -124,7 +128,9 @@ class Compiler():
                 timestamp=timestamp, 
                 original_code=original_code,
                 stderr=compile_result["stderr"],
-                model=model  
+                temperature=temperature,
+                max_new_tokens=max_new_tokens,
+                seed=seed
             )
 
             with open(os.path.join(save_dir, out_file), 'w') as f:

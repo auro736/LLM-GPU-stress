@@ -5,12 +5,23 @@ from models.togetherModel import TogetherModel
 from utils.utils import *
 from utils.parser import my_parser
 
-from compiler import Compiler
-from codeParser import codeParser
+from compilingAssistantAgent import CompilingAssistantAgent
+from codeParser import CodeParser
+
+from cudaExpertAgent import CudaExpertAgent
+from optimizerAgent import OptimizerAgent
 
 import os
+import json
 import subprocess
 from datetime import datetime
+
+"""DA METTERE CHE NON METTE _ NEL FILE .CU SISTEMA TUTTO DI CONSEGUENZA""" #DONE
+
+"""IMPLEMENTARE HISTORY DI CUDA EXPERT AGENT""" # DONE
+
+"""IMPLEMENTARE MODEL TYPE IN ARGS E API KEY GENERICA""" # DONE
+"""METTERE IN ARGS LE TEMP"""
 
 def main():
     
@@ -20,65 +31,68 @@ def main():
     output_dir = f'./outputs/{args.model.split("/")[1]}'
     os.makedirs(output_dir, exist_ok=True)
 
-    system_prompt = get_system_prompt(mode=args.mode)
-    user_prompt = get_user_prompt(mode=args.mode)
 
-    messages = [
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt},
-                ]
-    
-    # maybe add into user prompt or here as var the duration time of the test
-    # or say alway to add a user input to define test duration
-    # CONTROLALRE TEST DURATION = QUANTO DEVE GIRARE IL CODICE
+    # CONTROLLARE TEST DURATION = QUANTO DEVE GIRARE IL CODICE
 
-
-    generator_agent = TogetherModel(model_name=args.model, api_key=args.together_api_key)
-    answer = generator_agent.generate(messages=messages, temperature=0.5, max_new_tokens=None, seed=4899)
-    # add args for temp
+    cuda_expert_agent = CudaExpertAgent(
+        model_type=args.model_type, 
+        model_name=args.model, 
+        api_key=args.api_key,
+        history_max_turns=5, 
+        enable_history=True
+    )
+    gpu_char = "two RTX 6000 Ada generation GPUs with CUDA 12 and 48GB VRAM each"
+    test_duration = "120"
+    answer = cuda_expert_agent.generate(
+        gpu_char=gpu_char, 
+        test_duration=test_duration, 
+        temperature=0.5, 
+        max_new_tokens=None, 
+        seed=4899
+    )
+  
     print(answer)
 
-    clean_answer, code_type = clean_string(answer)
+    final_code, code_type = clean_string(answer)
     
-    codeParser = codeParser(code_string=clean_answer, code_type=code_type)
-    clean_answer, out_file = codeParser.extract_code_from_output(timestamp=t)
+    code_parser = CodeParser(code_string=final_code, code_type=code_type)
+    final_code, out_file = code_parser.extract_code_from_output(timestamp=t)
 
     try:
         with open(os.path.join(output_dir, out_file), 'w') as file:
-            file.write(clean_answer)
+            file.write(final_code)
     except:
         raise Exception("Error while saving {code_type} file")
     
-    # file_name = out_file.split('.')[0]
-    file_name = out_file.split('.')[0].replace('_', '')
-
+    file_name = out_file.split('.')[0]
     dir_eval = f'../evaluate/cupti/02_profiling_injection/test-apps/{file_name}'
     os.makedirs(dir_eval, exist_ok=True)
 
     try:
         with open(os.path.join(dir_eval, out_file), 'w') as file:
-            file.write(clean_answer)
+            file.write(final_code)
     except:
         raise Exception("Error while saving {code_type} file into eval folder")
     
 
     make_template_dir = './utils/make_template'
 
-    makeCompiler = Compiler(template_dir=make_template_dir)
-    makeCompiler.prepare_makefile(file_name=file_name, out_file=out_file, save_dir=dir_eval)
-    compile_result = makeCompiler.compile(save_dir=dir_eval)
-    print(compile_result)
+    # compilerAgent = CompilingAssistantAgent(template_dir=make_template_dir)
+    # compilerAgent.prepare_makefile(file_name=file_name, out_file=out_file, save_dir=dir_eval)
+    # compile_result = compilerAgent.compile(save_dir=dir_eval)
+    # print(compile_result)
 
-    max_attempts = 3
-    attempt = 1
-    if not compile_result["success"]:
-        makeCompiler.fix_compile(max_attempts=max_attempts,
-                                 attempt=attempt, 
-                                 compile_result=compile_result, 
-                                 save_dir=dir_eval, 
-                                 out_file=out_file, 
-                                 timestamp=t, 
-                                 model=generator_agent)
+    # max_attempts = 3
+    # attempt = 1
+
+    # if not compile_result["success"]:
+    #     compilerAgent.fix_compile(max_attempts=max_attempts,
+    #                              attempt=attempt, 
+    #                              compile_result=compile_result, 
+    #                              save_dir=dir_eval, 
+    #                              out_file=out_file, 
+    #                              timestamp=t, 
+    #                              model=cuda_expert_agent)
         # controlla poi prompt per correzioni codici
         # metti var per temperatura e seed
 
@@ -102,7 +116,7 @@ def main():
     # with open(f"../evaluate/cupti/02_profiling_injection/exe/bash/postprocessing/{file_name}.sh", "w") as f:
     #     f.write(content)
 
-    codeParser.adaptCode(file_name=file_name)
+    code_parser.adaptCode(file_name=file_name)
 
     command = ["sudo", "bash", f"exe/complete_stress_profile.sh", f"{file_name}"]
     result = subprocess.run(command,
@@ -113,17 +127,33 @@ def main():
     print("STDOUT:\n", result.stdout)
     print("STDERR:\n", result.stderr)
 
-    refiner_agent = TogetherModel(model_name=args.model, api_key=args.together_api_key)
+   
 
-    refiner_system_prompt = """"""
-    refiner_user_prompt = """"""
+    # file_name = "out1754575644"
+    # out_file = "out_1754575644.cu"
+    # dir_eval = f'../evaluate/cupti/02_profiling_injection/test-apps/{file_name}'
+    # with open(os.path.join(dir_eval, out_file), 'r') as f:
+    #             final_code = f.read()
 
-    messages = [
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt},
-                ]
+    metrics_path = f'../evaluate/cupti/02_profiling_injection/data/postprocessed/stress2/{file_name}_evaluation.json'
+    with open(metrics_path, 'r') as f:
+        metrics = json.load(f)
+    
+    print(metrics)
 
-    # implement the refiner agent to refine code to optimize metrics
+    optimizer_agent = OptimizerAgent(model_type=args.model_type, model_name=args.model, api_key=args.api_key)
+    suggestions = optimizer_agent.generate(final_code=final_code, metrics=metrics, temperature=0.5, max_new_tokens=None, seed=4899)
+    print(suggestions)
+
+    cuda_expert_agent.add_to_history("user", suggestions)
+    new_code = cuda_expert_agent.generate(
+        gpu_char=gpu_char, 
+        test_duration=test_duration, 
+        temperature=0.5, 
+        max_new_tokens=None, 
+        seed=4899
+    )
+
 
 
 

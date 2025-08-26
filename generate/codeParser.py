@@ -1,10 +1,10 @@
 import os
 
-class codeParser():
+class CodeParser():
 
     def __init__(self, code_string, code_type):
-        self.codeString = code_string
-        self.codeType = code_type
+        self.code_string = code_string
+        self.code_type = code_type
 
     def extract_code_from_output(self, timestamp):
         """
@@ -17,37 +17,31 @@ class codeParser():
             str: Clean code content without markdown formatting or trailing text
         """
         if self.code_type == 'cpp':
-            out_file = f'out_{timestamp}.cu' #forzato a .cu se no si rompe tutto durante compilazione
+            out_file = f'out{timestamp}.cu' #forzato a .cu se no si rompe tutto durante compilazione
         if self.code_type == 'cuda':
-            out_file = f'out_{timestamp}.cu'
-        # If there's no code block markers, assume the whole text is code
-        if '```' not in self.codeString:
-            return self.codeString.strip()
+            out_file = f'out{timestamp}.cu'
+
+        if '```' not in self.code_string:
+            return self.code_string.strip(), out_file
         
-        # Find the first code block (starting with ```)
-        lines = self.codeString.split('\n')
+       
+        lines = self.code_string.split('\n')
         code_lines = []
         in_code_block = False
         
         for line in lines:
-            # Check if this line starts a code block
+           
             if line.strip().startswith('```'):
                 if not in_code_block:
-                    # Starting a code block
                     in_code_block = True
                     continue
                 else:
-                    # Ending the code block - stop processing
                     break
             
-            # If we're in a code block, collect the line
             if in_code_block:
                 code_lines.append(line)
         
-        # Join the code lines and clean up
         code = '\n'.join(code_lines)
-        
-        # Remove any leading/trailing whitespace
         code = code.strip()
         
         return code, out_file
