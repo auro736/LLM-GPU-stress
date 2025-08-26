@@ -77,22 +77,26 @@ def main():
 
     make_template_dir = './utils/make_template'
 
-    # compilerAgent = CompilingAssistantAgent(template_dir=make_template_dir)
-    # compilerAgent.prepare_makefile(file_name=file_name, out_file=out_file, save_dir=dir_eval)
-    # compile_result = compilerAgent.compile(save_dir=dir_eval)
-    # print(compile_result)
+    compilerAgent = CompilingAssistantAgent(template_dir=make_template_dir, model_type=args.model_type, model_name=args.model, api_key=args.api_key)
+    compilerAgent.prepare_makefile(file_name=file_name, out_file=out_file, save_dir=dir_eval)
+    compile_result = compilerAgent.compile(save_dir=dir_eval)
+    print(compile_result)
 
-    # max_attempts = 3
-    # attempt = 1
+    max_attempts = 3
+    attempt = 1
 
-    # if not compile_result["success"]:
-    #     compilerAgent.fix_compile(max_attempts=max_attempts,
-    #                              attempt=attempt, 
-    #                              compile_result=compile_result, 
-    #                              save_dir=dir_eval, 
-    #                              out_file=out_file, 
-    #                              timestamp=t, 
-    #                              model=cuda_expert_agent)
+    if not compile_result["success"]:
+        compilerAgent.fix_compile(
+            max_attempts=max_attempts,
+            attempt=attempt, 
+            compile_result=compile_result, 
+            save_dir=dir_eval, 
+            out_file=out_file, 
+            timestamp=t,
+            temperature=0.5,
+            max_new_tokens=None, 
+            seed=4899
+        )
         # controlla poi prompt per correzioni codici
         # metti var per temperatura e seed
 
