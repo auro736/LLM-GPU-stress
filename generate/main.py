@@ -12,6 +12,7 @@ from cudaExpertAgent import CudaExpertAgent
 from optimizerAgent import OptimizerAgent
 
 import os
+import sys
 import json
 import subprocess
 from datetime import datetime
@@ -21,14 +22,33 @@ from datetime import datetime
 """IMPLEMENTARE HISTORY DI CUDA EXPERT AGENT""" # DONE
 
 """IMPLEMENTARE MODEL TYPE IN ARGS E API KEY GENERICA""" # DONE
+
 """METTERE IN ARGS LE TEMP"""
+
+"""METTERE GESTIONE NON COMPILAZIONE DOPO X ATTEMPS, UN BREAK O QUALCOSA """ # DONE
+
+"""CAPIRE SE POSSIBILE IMPLEMENTARE UN CONTROLLO PER DIRE 'SONO SODDISFATTO DELLE METRICHE' """ # CHIEDI BEPI 
+
+"""IMPLEMENTARE GENERAZIONE CON OPENAI""" # DONE
+
+"""VERIFICARE CLASSE COMPILAZIONE""" # FAI OGGI
+
+"""CAPIRE COME GESTIRE SUGGERIMENTI""" 
+
+"""GESTIRE IL BUG """ # DONE
+
+"""GESTISCI MEGLIO IL PARSING IO CASTEREI TUTTO A CUDA, SUPPONENDO CHE CI GENERA SOLO CUDA CODE
+MAGARI DA SCRIVERE MEGLIO IL PROMPT DEL DEBUGGER""" #DONE MA SCHIFEZZA VERIFICA MEGLIO
 
 def main():
     
     args = my_parser()
     t = int(round(datetime.now().timestamp()))
 
-    output_dir = f'./outputs/{args.model.split("/")[1]}'
+    if args.model_type == 'together':
+        output_dir = f'./outputs/{args.model.split("/")[1]}'
+    else:
+        output_dir = f'./outputs/{args.model}'
     os.makedirs(output_dir, exist_ok=True)
 
 
@@ -86,19 +106,24 @@ def main():
     attempt = 1
 
     if not compile_result["success"]:
-        compilerAgent.fix_compile(
-            max_attempts=max_attempts,
-            attempt=attempt, 
-            compile_result=compile_result, 
-            save_dir=dir_eval, 
-            out_file=out_file, 
-            timestamp=t,
-            temperature=0.5,
-            max_new_tokens=None, 
-            seed=4899
-        )
-        # controlla poi prompt per correzioni codici
-        # metti var per temperatura e seed
+        try:
+            compilerAgent.fix_compile(
+                max_attempts=max_attempts,
+                attempt=attempt, 
+                compile_result=compile_result, 
+                save_dir=dir_eval, 
+                out_file=out_file, 
+                timestamp=t,
+                temperature=0.5,
+                max_new_tokens=None, 
+                seed=4899
+            )
+            # controlla poi prompt per correzioni codici
+            # metti var per temperatura e seed
+        except Exception as e:
+            print(e)
+            sys.exit(1)
+    
 
 
 

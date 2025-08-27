@@ -20,8 +20,11 @@ class CodeParser():
             out_file = f'out{timestamp}.cu' #forzato a .cu se no si rompe tutto durante compilazione
         if self.code_type == 'cuda':
             out_file = f'out{timestamp}.cu'
+        if self.code_type == 'c':
+            out_file = f'out{timestamp}.cu'
 
         if '```' not in self.code_string:
+            out_file = f'out{timestamp}.cu'
             return self.code_string.strip(), out_file
         
        

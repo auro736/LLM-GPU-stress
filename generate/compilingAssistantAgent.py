@@ -159,7 +159,7 @@ class CompilingAssistantAgent(BaseAgent):
     def __init__(self, model_type: str, model_name: str, api_key: str, template_dir: str):
         super().__init__(model_type, model_name, api_key)
         self.template_dir = template_dir
-        self.system_prompt = "You are a helpful compiler assistant. Fix errors in the code."
+        self.system_prompt = "You are an expert debugger of compiling CUDA codes. Your task is to correct CUDA code that has errors during compilation. You will be provided with the error and the code, fix it in order to compile it."
 
     def prepare_makefile(self, file_name: str, out_file: str, save_dir: str) -> None:
         template_path = os.path.join(self.template_dir, "Makefile")
@@ -263,6 +263,7 @@ class CompilingAssistantAgent(BaseAgent):
 
         # Clean and parse the LLM response
         cleaned, code_type = clean_string(response)
+        print('AAAAAAA', code_type)
         parser = CodeParser(code_string=cleaned, code_type=code_type)
         clean_answer, out_file = parser.extract_code_from_output(timestamp=timestamp)
 
@@ -307,7 +308,16 @@ class CompilingAssistantAgent(BaseAgent):
             compile_result = self.compile(save_dir=save_dir)
             attempt += 1
 
+        # if compile_result.get("success", False):
+        #     print(f"Error solved in {attempt - 1} attempts")
+        # else:
+        #     print(f"No corrections after {max_attempts} attempts.")
         if compile_result.get("success", False):
             print(f"Error solved in {attempt - 1} attempts")
-        else:
-            print(f"No corrections after {max_attempts} attempts.")
+            return
+
+        raise Exception(
+            f"Compilation failed after {max_attempts} attempts.\n"
+            f"Last return code: {compile_result.get('returncode')}\n"
+            f"Last stderr:\n{compile_result.get('stderr', '')}"
+        )

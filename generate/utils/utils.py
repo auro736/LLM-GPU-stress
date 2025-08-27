@@ -11,22 +11,36 @@ def clean_string(text):
     """
     text = text.strip()
     code = ''
-
+    print('BBBB', text)
     if text.startswith('```cpp'):
+        print('sono in if cpp')
         text = text[6:].strip() 
         code = 'cpp'
 
     if text.startswith('```cuda'):
+        print('sono in if cuda')
         text = text[7:].strip() 
         code = 'cuda'
         
     if text.startswith('```cu'):
+        print('sono in if cu')
         text = text[5:].strip() 
         code = 'cuda'
+    
+    if text.startswith('```c'):
+        print('sono in if c')
+        text = text[4:].strip() 
+        code = 'c'
 
     if text.startswith('```json'):
+        print('sono in if json')
         text = text[7:].strip() 
         code = 'json'
+
+    if text.startswith('```'):
+        print('sono in no name')
+        text = text[3:].strip() 
+        code = 'cuda'
 
     if text.endswith('```'):
         text = text[:-3].strip()
