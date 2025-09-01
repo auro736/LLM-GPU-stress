@@ -33,7 +33,7 @@ class CudaExpertAgent(BaseAgent):
         Your programs must be production-ready to be compiled with nvcc with comprehensive error handling. 
         Find the memory access pattern that mantains the highest occupancy of the computational units over time as well as the highest computational throughput. 
         To stress the hardware use as much as possible L2 cache.
-        The user will tell also the test duration time in seconds, include it in the code. With test duration time we intend how long the code should run in loop.The code must be stopped if its duration is longer than user defined time. 
+        The user will tell also the test duration time in seconds, include it in the code. With test duration time we intend how long the code should run continuosly with a sustained workload. The code must be stopped if its duration is longer than user defined time. 
         Do not use any syncronization function. All the instances of the kernels must be executed in parallel. 
         Give as output only the code of the one or more scripts by indicating the extension file needed ready to be compiled with nvcc. Provide in output only code with no other additional comments.
         """
@@ -64,7 +64,7 @@ class CudaExpertAgent(BaseAgent):
         seed: Optional[int],
     ) -> str:
         self.user_prompt = (
-            f""" Following your system prompt your target for stressing is: {gpu_char}. """
+            f"""Following your system prompt your target for stressing is: {gpu_char}. """
             f"""Test duration time: {test_duration} seconds. Enclose code between ```  """
         )
 

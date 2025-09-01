@@ -1,6 +1,6 @@
-from models.localModel import LocalModel
-from models.openaiModel import OpenAIModel
-from models.togetherModel import TogetherModel
+# from models.localModel import LocalModel
+# from models.openaiModel import OpenAIModel
+# from models.togetherModel import TogetherModel
 
 from utils.utils import *
 from utils.parser import my_parser
@@ -17,25 +17,12 @@ import json
 import subprocess
 from datetime import datetime
 
-"""DA METTERE CHE NON METTE _ NEL FILE .CU SISTEMA TUTTO DI CONSEGUENZA""" #DONE
 
-"""IMPLEMENTARE HISTORY DI CUDA EXPERT AGENT""" # DONE
-
-"""IMPLEMENTARE MODEL TYPE IN ARGS E API KEY GENERICA""" # DONE
-
-"""METTERE IN ARGS LE TEMP"""
-
-"""METTERE GESTIONE NON COMPILAZIONE DOPO X ATTEMPS, UN BREAK O QUALCOSA """ # DONE
+"""METTERE IN ARGS LE TEMP""" 
 
 """CAPIRE SE POSSIBILE IMPLEMENTARE UN CONTROLLO PER DIRE 'SONO SODDISFATTO DELLE METRICHE' """ # CHIEDI BEPI 
 
-"""IMPLEMENTARE GENERAZIONE CON OPENAI""" # DONE
-
-"""VERIFICARE CLASSE COMPILAZIONE""" # FAI OGGI
-
 """CAPIRE COME GESTIRE SUGGERIMENTI""" 
-
-"""GESTIRE IL BUG """ # DONE
 
 """GESTISCI MEGLIO IL PARSING IO CASTEREI TUTTO A CUDA, SUPPONENDO CHE CI GENERA SOLO CUDA CODE
 MAGARI DA SCRIVERE MEGLIO IL PROMPT DEL DEBUGGER""" #DONE MA SCHIFEZZA VERIFICA MEGLIO
@@ -46,9 +33,9 @@ def main():
     t = int(round(datetime.now().timestamp()))
 
     if args.model_type == 'together':
-        output_dir = f'./outputs/{args.model.split("/")[1]}'
+        output_dir = f'./outputs/{args.model.split("/")[1]}/{t}'
     else:
-        output_dir = f'./outputs/{args.model}'
+        output_dir = f'./outputs/{args.model}/{t}'
     os.makedirs(output_dir, exist_ok=True)
 
 
@@ -61,8 +48,10 @@ def main():
         history_max_turns=5, 
         enable_history=True
     )
+
     gpu_char = "two RTX 6000 Ada generation GPUs with CUDA 12 and 48GB VRAM each"
     test_duration = "120"
+
     answer = cuda_expert_agent.generate(
         gpu_char=gpu_char, 
         test_duration=test_duration, 
@@ -123,27 +112,6 @@ def main():
         except Exception as e:
             print(e)
             sys.exit(1)
-    
-
-
-
-    # profiling_bash_template = './utils/profiling_bash_template'
-    # with open(os.path.join(profiling_bash_template,"template.sh"), "r") as f:
-    #     content = f.read()
-    
-    # content = content.replace("./test-apps/rora/rora 60", f"./test-apps/{file_name}/{file_name} 60")
-    # content = content.replace("data/raw/stress2/rora_$INJECTION_KERNEL_COUNT.txt", f"data/raw/stress2/{file_name}_$INJECTION_KERNEL_COUNT.txt")
-    
-    # with open(f"../evaluate/cupti/02_profiling_injection/exe/bash/profiling_stress2/{file_name}.sh", "w") as f:
-    #     f.write(content)
-
-    # postprocessing_bash_template = './utils/postprocessing_bash_template'
-    # with open(os.path.join(postprocessing_bash_template,"template.sh"), "r") as f:
-    #     content = f.read()
-
-    # content = content.replace("APP_NAME='rora'", f"APP_NAME='{file_name}'")
-    # with open(f"../evaluate/cupti/02_profiling_injection/exe/bash/postprocessing/{file_name}.sh", "w") as f:
-    #     f.write(content)
 
     code_parser.adaptCode(file_name=file_name)
 
@@ -175,6 +143,7 @@ def main():
     print(suggestions)
 
     cuda_expert_agent.add_to_history("user", suggestions)
+
     new_code = cuda_expert_agent.generate(
         gpu_char=gpu_char, 
         test_duration=test_duration, 
@@ -182,6 +151,8 @@ def main():
         max_new_tokens=None, 
         seed=4899
     )
+    # IL NUOVO CODICE SALVARLO CON UN NOME DIVERSO DA OUTTIMESTAMP MAGARI METTI UNA VERSIONE
+    # CAPIRE COME GESTIRE IL LOOP SOPRATTUTTO
 
 
 
