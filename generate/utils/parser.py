@@ -12,6 +12,8 @@ def my_parser():
                     help="API key")
     parser.add_argument("--mode", type=str, default='zero-shot', 
                     help="TogetherAI API key (uses env var if not provided)")
+    parser.add_argument("--optimization_mode", type=str, default='temp', choices=['temp', 'clocks'],
+                    help="On which metric you want to optimize.")
     
     return parser.parse_args()
     

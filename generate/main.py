@@ -1,7 +1,3 @@
-# from models.localModel import LocalModel
-# from models.openaiModel import OpenAIModel
-# from models.togetherModel import TogetherModel
-
 from utils.utils import *
 from utils.parser import my_parser
 
@@ -17,10 +13,7 @@ import json
 import subprocess
 from datetime import datetime
 
-
 """METTERE IN ARGS LE TEMP""" 
-
-"""CAPIRE SE POSSIBILE IMPLEMENTARE UN CONTROLLO PER DIRE 'SONO SODDISFATTO DELLE METRICHE' """ # CHIEDI BEPI 
 
 """CAPIRE COME GESTIRE SUGGERIMENTI""" 
 
@@ -145,17 +138,47 @@ def main():
     max_runs = 3
     current_version = 0 
 
-    for run in range(1, max_runs + 1):  # This will run exactly max_runs times (1, 2, 3)
-        print(f"\n--- Optimization Run {run}/{max_runs} ---")
+    optimization_mode = args.optimization_mode
+
+    iteration_count = 0
+    target_reached = False
+
+    for run in range(1, max_runs + 1):
+        iteration_count += 1
         
-        # Generate optimization suggestions based on current code and metrics
+        # Check safety counter first
+        if iteration_count > max_runs:
+            print(f"\n⚠️  Maximum iterations ({max_runs}) reached. Stopping optimization to prevent infinite loop.")
+            break
+
+        if optimization_mode == 'clocks':
+            max_objective_metric = 2100
+            epsilon = 0.2
+            current_objective_metric = current_metrics["Clock Frequency MHz"]
+        else:
+            max_objective_metric = 93
+            epsilon = 0.2
+            current_objective_metric = current_metrics["Steady Temp °C"]
+
+        ratio = round(current_objective_metric/max_objective_metric, 2)
+        print(f"\n--- Optimization Run {run}/{max_runs} (Iteration {iteration_count}) ---")
+        print(f"Current {optimization_mode} metric: {current_objective_metric}")
+        print(f"Target ratio: {epsilon}, Current ratio: {ratio}")
+        
+        # Check if target is reached
+        if ratio >= epsilon:
+            print(f"🎯 Target reached! Ratio {ratio} >= {epsilon}. Stopping optimization.")
+            target_reached = True
+            break
+
         suggestions = optimizer_agent.generate(
-            final_code=current_code, 
-            metrics=current_metrics, 
-            temperature=0.5, 
-            max_new_tokens=None, 
-            seed=4899
+        final_code=current_code, 
+        metrics=current_metrics, 
+        temperature=0.5, 
+        max_new_tokens=None, 
+        seed=4899
         )
+        
         print("Optimization suggestions:", suggestions)
 
         # Add suggestions to history and generate new code
@@ -247,9 +270,157 @@ def main():
             print(f"Error reading new code/metrics: {e}")
             # If we can't read the new metrics, we should probably break or use previous version
             break
+    
+    summary_path = save_optimization_summary(
+        iteration_count=iteration_count,
+        current_version=current_version,
+        optimization_mode=optimization_mode,
+        current_objective_metric=current_objective_metric,
+        target_reached=target_reached,
+        ratio=ratio,
+        epsilon=epsilon,
+        max_iterations=max_runs,
+        max_runs=max_runs,
+        max_objective_metric=max_objective_metric,
+        current_metrics=current_metrics,
+        output_dir=output_dir,
+        timestamp=t
+)
+    print(summary_path)
 
-    print(f"\nOptimization completed after {max_runs} runs")
-    print(f"Final version: V{current_version}")
+    # # Final summary
+    # print(f"\n{'='*50}")
+    # print("OPTIMIZATION SUMMARY")
+    # print(f"{'='*50}")
+    # print(f"Total iterations run: {iteration_count}")
+    # print(f"Final version: V{current_version}")
+
+    # if target_reached:
+    #     print(f"✅ SUCCESS: Target ratio {epsilon} was reached!")
+    #     print(f"Final ratio: {ratio}")
+    # elif iteration_count > max_iterations:
+    #     print(f"⚠️  STOPPED: Maximum iterations ({max_iterations}) reached")
+    # else:
+    #     print(f"📝 COMPLETED: All {max_runs} planned runs executed")
+
+    # print(f"Optimization mode: {optimization_mode}")
+    # print(f"Final {optimization_mode} metric: {current_objective_metric}")
+
+    # for run in range(1, max_runs + 1):  
+
+    #     if optimization_mode == 'clocks':
+    #         max_objective_metric = 2100
+    #         epsilon = 0.2
+    #         current_objective_metric= current_metrics["Clock Frequency MHz"]
+    #     else:
+    #         max_objective_metric = 93
+    #         epsilon = 0.2
+    #         current_objective_metric= current_metrics["Steady Temp °C"]
+
+    #     ratio = round(current_objective_metric/max_objective_metric,2)
+    #     print(f"\n--- Optimization Run {run}/{max_runs} ---")
+        
+    #     suggestions = optimizer_agent.generate(
+    #         final_code=current_code, 
+    #         metrics=current_metrics, 
+    #         temperature=0.5, 
+    #         max_new_tokens=None, 
+    #         seed=4899
+    #     )
+    #     print("Optimization suggestions:", suggestions)
+
+    #     # Add suggestions to history and generate new code
+    #     cuda_expert_agent.add_to_history("user", suggestions)
+        
+    #     new_code_response = cuda_expert_agent.generate(
+    #         gpu_char=gpu_char, 
+    #         test_duration=test_duration, 
+    #         temperature=0.5, 
+    #         max_new_tokens=None, 
+    #         seed=4899
+    #     )
+
+    #     # Process the new code
+    #     final_code, code_type = clean_string(new_code_response)
+    #     code_parser = CodeParser(code_string=final_code, code_type=code_type)
+    #     processed_code, _ = code_parser.extract_code_from_output(timestamp=t)
+
+    #     # Create new version names
+    #     new_version = current_version + 1
+    #     new_file_name = f"{out_file.split('.')[0]}V{new_version}"
+    #     new_out_file = f"{new_file_name}.cu"
+        
+    #     # Create directory for new version
+    #     new_dir_eval = f'../evaluate/cupti/02_profiling_injection/test-apps/{new_file_name}'
+    #     os.makedirs(new_dir_eval, exist_ok=True)
+        
+    #     # Save the new code
+    #     try:
+    #         with open(os.path.join(new_dir_eval, new_out_file), 'w') as file:
+    #             file.write(processed_code)
+    #         print(f"Saved optimized code to: {new_out_file}")
+    #     except Exception as e:
+    #         print(f"Error saving optimized code: {e}")
+    #         continue
+        
+    #     # Prepare and compile
+    #     compilerAgent.prepare_makefile(file_name=new_file_name, out_file=new_out_file, save_dir=new_dir_eval)
+    #     compile_result = compilerAgent.compile(save_dir=new_dir_eval)
+    #     print(f"Compilation result: {compile_result}")
+
+    #     # Fix compilation errors if needed
+    #     if not compile_result["success"]:
+    #         try:
+    #             compilerAgent.fix_compile(
+    #                 max_attempts=max_attempts,
+    #                 attempt=1,  # Reset attempt counter for each optimization run
+    #                 compile_result=compile_result, 
+    #                 save_dir=new_dir_eval, 
+    #                 out_file=new_out_file, 
+    #                 timestamp=t,
+    #                 temperature=0.5,
+    #                 max_new_tokens=None, 
+    #                 seed=4899
+    #             )
+    #         except Exception as e:
+    #             print(f"Failed to fix compilation errors: {e}")
+    #             continue  # Skip this optimization run and try the next one
+        
+    #     # Adapt and profile the code
+    #     code_parser.adaptCode(file_name=new_file_name)
+
+    #     command = ["sudo", "bash", f"exe/complete_stress_profile.sh", f"{new_file_name}"]
+    #     result = subprocess.run(command,
+    #                 capture_output=True,
+    #                 text=True,
+    #                 cwd="../evaluate/cupti/02_profiling_injection/")
+        
+    #     print("STDOUT:\n", result.stdout)
+    #     print("STDERR:\n", result.stderr)
+
+    #     print(cuda_expert_agent.get_history())
+
+    #     # Read the final compiled code and new metrics
+    #     try:
+    #         with open(os.path.join(new_dir_eval, new_out_file), 'r') as f:
+    #             current_code = f.read()
+
+    #         new_metrics_path = f'../evaluate/cupti/02_profiling_injection/data/postprocessed/stress2/{new_file_name}_evaluation.json' 
+    #         with open(new_metrics_path, 'r') as f:
+    #             current_metrics = json.load(f)
+                
+    #         print(f"New metrics for V{new_version}:", current_metrics)
+            
+    #         # Update current version for next iteration
+    #         current_version = new_version
+            
+    #     except Exception as e:
+    #         print(f"Error reading new code/metrics: {e}")
+    #         # If we can't read the new metrics, we should probably break or use previous version
+    #         break
+
+    # print(f"\nOptimization completed after {max_runs} runs")
+    # print(f"Final version: V{current_version}")
 
 
 
