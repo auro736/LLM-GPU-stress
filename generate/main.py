@@ -20,6 +20,7 @@ from datetime import datetime
 """GESTISCI MEGLIO IL PARSING IO CASTEREI TUTTO A CUDA, SUPPONENDO CHE CI GENERA SOLO CUDA CODE
 MAGARI DA SCRIVERE MEGLIO IL PROMPT DEL DEBUGGER""" #DONE MA SCHIFEZZA VERIFICA MEGLIO
 
+
 def main():
     
     args = my_parser()
@@ -42,8 +43,8 @@ def main():
         enable_history=True
     )
 
-    gpu_char = "two RTX 6000 Ada generation GPUs with CUDA 12 and 48GB VRAM each"
-    test_duration = "120"
+    gpu_char = "one RTX 6000 Ada generation GPU with CUDA 12 and 48GB VRAM"
+    test_duration = "60"
 
     answer = cuda_expert_agent.generate(
         gpu_char=gpu_char, 
@@ -74,7 +75,7 @@ def main():
         with open(os.path.join(dir_eval, out_file), 'w') as file:
             file.write(final_code)
     except:
-        raise Exception("Error while saving {code_type} file into eval folder")
+        raise Exception(f"Error while saving {code_type} file into eval folder")
     
 
     make_template_dir = './utils/make_template'
@@ -128,9 +129,9 @@ def main():
 
     metrics_path = f'../evaluate/cupti/02_profiling_injection/data/postprocessed/stress2/{base_file_name}_evaluation.json' 
     with open(metrics_path, 'r') as f:
-        current_metrics = json.load(f)
-    
-   
+        current_metrics_raw = json.load(f)
+
+    current_metrics = current_metrics_raw[f'{base_file_name}']
     print("Initial metrics:", current_metrics)
 
     optimizer_agent = OptimizerAgent(model_type=args.model_type, model_name=args.model, api_key=args.api_key)
@@ -154,7 +155,7 @@ def main():
         if optimization_mode == 'clocks':
             max_objective_metric = 2100
             epsilon = 0.2
-            current_objective_metric = current_metrics["Clock Frequency MHz"]
+            current_objective_metric = current_metrics['Clock Frequency MHz'][0]
         else:
             max_objective_metric = 93
             epsilon = 0.2
@@ -259,8 +260,9 @@ def main():
 
             new_metrics_path = f'../evaluate/cupti/02_profiling_injection/data/postprocessed/stress2/{new_file_name}_evaluation.json' 
             with open(new_metrics_path, 'r') as f:
-                current_metrics = json.load(f)
-                
+                current_metrics_raw = json.load(f)
+
+            current_metrics = current_metrics_raw[f'{new_file_name}']
             print(f"New metrics for V{new_version}:", current_metrics)
             
             # Update current version for next iteration
