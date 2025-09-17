@@ -1,0 +1,21 @@
+{
+    "out1758105913V0": {
+        "Global hit rate": 0.593446122572198,
+        "L2 hit rate by read instruction": 100.0,
+        "L2 hit rate by write instruction": 100.0,
+        "Executed instructions": 0.28203885,
+        "Instruction throughput": 9.7095775,
+        "Issued instructions": 1.152055,
+        "Read Bytes": 12183700000.0,
+        "Written bytes": 10530600000.0,
+        "Memory Stall": 38.742,
+        "Controller Stall": 2.317716107142857,
+        "Throttle Stall": 4.268995240000001,
+        "Steady Temp °C": NaN,
+        "Max Temp °C": 91.0,
+        "Energy spent J/min": 11891.531999997795,
+        "Delta Clock Frequency MHz": 374.0163934426229,
+        "Clock Frequency MHz": 2730.9836065573772,
+        "Max Clock Frequency MHz": 3105.0
+    }
+}

@@ -1,0 +1,33 @@
+session_id,duration_ms,location,metric_name,rollup_operation,Post,range_name,metric_value
+1,2025-09-16 07:47:57.197 ,sm,inst_executed,avg,per_cycle_elapsed,0,1.90676
+1,2025-09-16 07:47:57.197 ,sm,instruction_throughput,avg,pct_of_peak_sustained_active,0,49.1429
+1,2025-09-16 07:47:57.197 ,sm,inst_executed,avg,per_cycle_active,0,1.96557
+1,2025-09-16 07:47:57.197 ,sm,inst_issued,avg,pct_of_peak_sustained_active,0,49.1429
+1,2025-09-16 07:47:57.197 ,sm,inst_issued,avg,per_cycle_active,0,1.96572
+1,2025-09-16 07:47:57.197 ,smsp,sass_thread_inst_executed_op_fp64_pred_on,sum,No post,0,0
+1,2025-09-16 07:47:57.197 ,smsp,sass_thread_inst_executed_op_integer_pred_on,sum,No post,0,2.62488e+08
+1,2025-09-16 07:47:57.197 ,dram,bytes_read,sum,per_second,0,0
+1,2025-09-16 07:47:57.197 ,dram,bytes_write,sum,per_second,0,0
+1,2025-09-16 07:47:57.197 ,l1tex,t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit,sum,No post,0,0
+1,2025-09-16 07:47:57.197 ,l1tex,t_sectors_pipe_lsu_mem_global_op_st_lookup_hit,sum,No post,0,532
+1,2025-09-16 07:47:57.197 ,l1tex,t_sectors_pipe_lsu_mem_global_op_red_lookup_hit,sum,No post,0,0
+1,2025-09-16 07:47:57.197 ,l1tex,t_sectors_pipe_lsu_mem_global_op_atom_lookup_hit,sum,No post,0,0
+1,2025-09-16 07:47:57.197 ,l1tex,t_sectors_pipe_lsu_mem_global_op_ld,sum,No post,0,0
+1,2025-09-16 07:47:57.197 ,l1tex,t_sectors_pipe_lsu_mem_global_op_st,sum,No post,0,2078
+1,2025-09-16 07:47:57.197 ,l1tex,t_sectors_pipe_lsu_mem_global_op_red,sum,No post,0,0
+1,2025-09-16 07:47:57.197 ,l1tex,t_sectors_pipe_lsu_mem_global_op_atom,sum,No post,0,0
+1,2025-09-16 07:47:57.197 ,lts,t_sector_op_read_hit_rate,pct,No post,0,99.8876
+1,2025-09-16 07:47:57.197 ,lts,t_sector_op_write_hit_rate,pct,No post,0,100
+1,2025-09-16 07:47:57.197 ,smsp,warp_issue_stalled_imc_miss_per_warp_active,pct,No post,0,0.107595
+1,2025-09-16 07:47:57.197 ,smsp,warp_issue_stalled_long_scoreboard_per_warp_active,pct,No post,0,0
+1,2025-09-16 07:47:57.197 ,smsp,warp_issue_stalled_wait_per_warp_active,pct,No post,0,42.5482
+1,2025-09-16 07:47:57.197 ,smsp,warp_issue_stalled_short_scoreboard_per_warp_active,pct,No post,0,0.0130777
+1,2025-09-16 07:47:57.197 ,smsp,warp_issue_stalled_not_selected_per_warp_active,pct,No post,0,6.01056
+1,2025-09-16 07:47:57.197 ,smsp,warp_issue_stalled_sleeping_per_warp_active,pct,No post,0,0
+1,2025-09-16 07:47:57.197 ,smsp,warp_issue_stalled_barrier_per_warp_active,pct,No post,0,0
+1,2025-09-16 07:47:57.197 ,smsp,warp_issue_stalled_membar_per_warp_active,pct,No post,0,0
+1,2025-09-16 07:47:57.197 ,smsp,warp_issue_stalled_tex_throttle_per_warp_active,pct,No post,0,0
+1,2025-09-16 07:47:57.197 ,smsp,warp_issue_stalled_mio_throttle_per_warp_active,pct,No post,0,0
+1,2025-09-16 07:47:57.197 ,smsp,warp_issue_stalled_math_pipe_throttle_per_warp_active,pct,No post,0,1.62491
+1,2025-09-16 07:47:57.197 ,smsp,warp_issue_stalled_lg_throttle_per_warp_active,pct,No post,0,0
+1,2025-09-16 07:47:57.197 ,smsp,warp_issue_stalled_drain_per_warp_active,pct,No post,0,0.0128702

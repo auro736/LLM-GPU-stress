@@ -8,7 +8,10 @@ from pynvml import (
     NVML_MEMORY_ERROR_TYPE_CORRECTED,
     NVML_MEMORY_ERROR_TYPE_UNCORRECTED,
     NVML_VOLATILE_ECC,
-    NVML_AGGREGATE_ECC
+    NVML_AGGREGATE_ECC,
+    NVML_CLOCK_SM, 
+    NVML_TEMPERATURE_THRESHOLD_GPU_MAX, 
+    NVML_TEMPERATURE_THRESHOLD_SLOWDOWN
 )
 
 
@@ -20,8 +23,11 @@ def sample_telemetry(device):
     util = nvmlDeviceGetUtilizationRates(device)
     mem = nvmlDeviceGetMemoryInfo(device)
     clock_sm = nvmlDeviceGetClockInfo(device, NVML_CLOCK_SM)
+    clock_max_sm = nvmlDeviceGetMaxClockInfo(device, NVML_CLOCK_SM)
     clock_mem = nvmlDeviceGetClockInfo(device, NVML_CLOCK_MEM)
     clock_gr = nvmlDeviceGetClockInfo(device, NVML_CLOCK_GRAPHICS)
+    max_temp = nvmlDeviceGetTemperatureThreshold(device, NVML_TEMPERATURE_THRESHOLD_GPU_MAX)
+    slowdown_temp = nvmlDeviceGetTemperatureThreshold(device, NVML_TEMPERATURE_THRESHOLD_SLOWDOWN)
 
     try:
         total_energy = nvmlDeviceGetTotalEnergyConsumption(device)
@@ -82,6 +88,8 @@ def sample_telemetry(device):
         0,
         name,
         temp,
+        max_temp,
+        slowdown_temp,
         util.gpu,
         util.memory,
         mem.total // (1024 * 1024),
@@ -98,7 +106,8 @@ def sample_telemetry(device):
         ecc_agg_uncorr,
         total_energy,
         clock_freq,
-        adaptive_clock_freq
+        adaptive_clock_freq,
+        clock_max_sm
     ]
 
 def get_argparser():
@@ -120,13 +129,13 @@ def main(args):
 
     # Header CSV
     header = [
-        "timestamp_ns", "gpu_index", "name", "temperature_C",
+        "timestamp_ns", "gpu_index", "name", "temperature_C", "max_temp", "slowdown_temp",
         "util_gpu_percent", "util_mem_percent",
         "mem_total_MB", "mem_used_MB", "mem_free_MB",
         "clock_sm_MHz", "clock_mem_MHz", "clock_graphics_MHz",
         "fan_speed_percent", "power_draw_W", "ecc_volatile_corrected", 
         "ecc_volatile_uncorrected", "ecc_aggregate_corrected", "ecc_aggregate_uncorrected",
-        "total_energy_mJ", 'clock_freq', 'adaptive_clock_frequency'
+        "total_energy_mJ", 'clock_freq', 'adaptive_clock_frequency', 'clock_max_sm'
     ]
 
     # Sampling period (in nanosecondi)

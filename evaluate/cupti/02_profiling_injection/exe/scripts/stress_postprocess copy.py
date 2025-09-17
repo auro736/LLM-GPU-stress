@@ -2,7 +2,7 @@ import os
 import pandas as pd
 from pynvml import *
 import argparse
-# import ruptures as rpt
+import ruptures as rpt
 import json
 import numpy as np
 
@@ -13,11 +13,10 @@ def get_argparser():
     return parser
 
 def main(args):
-    
+   
     mapping_table = {
     'gpuburn5min': 'GPU-burn',
     'NN50Perclenet5': 'LeNet5',
-    'NN50PercLeNet5': 'LeNet5',
     'NN50Percmnasnet05': 'MnasNet',
     'NN50Percmobilenetv2': 'MobileNetV2',
     'NN50Percresnet18': 'ResNet18',
@@ -25,7 +24,9 @@ def main(args):
     'gaussian': 'Gaussian Elimination',
     'hotspot': 'Hotspot',
     'needle': 'Needleman-Wunsch',
-    'scgpu': 'Stream Cluster'
+    'scgpu': 'Stream Cluster',
+    'rora' : 'rora', 
+    'vectoradd' : 'vectoradd'
         }
 
     location_mapping={
@@ -90,22 +91,22 @@ def main(args):
     'warp_issue_stalled_misc_per_warp_active': 'Warp Issue Stalls Due to Miscellaneous Issues per Active Warp',
 
     }
-
     
     data_path = f'data/postprocessed/{args.performance}'
     app_names = pd.Series([file.split('_')[0] for file in os.listdir(data_path) if file.endswith('csv')]).unique()
-
+    # print(app_names)
     total_json = {}
     # for app in app_names:
     app = args.app
     if not app in list(mapping_table.keys()):
         mapping_table[app] = app
     total_json[f'{mapping_table[app]}'] = {}
-    
+    # print(mapping_table)
+
     ## Performance counters data processing
     pc_file_name = f'{app}_1.csv'
     pc_file_path = os.path.join(data_path, pc_file_name)
-
+    print(pc_file_path)
     pc_csv = pd.read_csv(pc_file_path)
 
     pc_csv['app'] = mapping_table[f'{app}']
@@ -229,34 +230,33 @@ def main(args):
     duration = telemetry_csv['Index'].max()
 
     signal = np.array(telemetry_csv['temperature_C'])
-    # algo = rpt.Pelt(model="rbf").fit(signal)
-    # result = algo.predict(pen=51)
-    # response_time = result[0]
+    algo = rpt.Pelt(model="rbf").fit(signal)
+    result = algo.predict(pen=51)
+    response_time = result[0]
 
     steady_temp = telemetry_csv[telemetry_csv['Index']>125]['temperature_C'].mean()
-    print(telemetry_csv.columns)
-    max_temp = telemetry_csv['max_temp'].mean()
 
     telemetry_csv['total_energy_J'] = telemetry_csv['total_energy_mJ']/1000
     spent_energy = telemetry_csv[['total_energy_J']].max() - telemetry_csv[['total_energy_J']].min()
     spent_energy['mean_energy_J'] = spent_energy['total_energy_J']/(duration/60)
-    delta_cf = telemetry_csv['clock_max_sm'] - telemetry_csv['clock_sm_MHz']
-    current_cf = telemetry_csv['clock_sm_MHz'].mean()
-    max_cf = telemetry_csv['clock_max_sm'].mean()
-    
-    total_json[f'{mapping_table[app]}']['Steady Temp °C'] = steady_temp
-    total_json[f'{mapping_table[app]}']['Max Temp °C'] = max_temp
-    total_json[f'{mapping_table[app]}']['Energy spent J/min'] = spent_energy['mean_energy_J']
-    total_json[f'{mapping_table[app]}']['Delta Clock Frequency MHz'] = delta_cf.mean()
-    total_json[f'{mapping_table[app]}']['Clock Frequency MHz'] = current_cf
-    total_json[f'{mapping_table[app]}']['Max Clock Frequency MHz'] = max_cf
+    cf = telemetry_csv['clock_sm_MHz'].mean()
 
-    # total_json[f'{mapping_table[app]}']['response (s)'] = response_time,
+    new_row = {'Steady Temp °C':steady_temp,
+                'Energy spent J/min': spent_energy['mean_energy_J'],
+                'Clock Frequency MHz': cf,
+                'response (s)': response_time
+                }
     
+
+    total_json[f'{mapping_table[app]}']['Steady Temp °C'] = steady_temp,
+    total_json[f'{mapping_table[app]}']['Energy spent J/min'] = spent_energy['mean_energy_J'],
+    total_json[f'{mapping_table[app]}']['Clock Frequency MHz'] = cf,
+    total_json[f'{mapping_table[app]}']['response (s)'] = response_time,
+        
     with open(f"{data_path}/{app}_evaluation.json", "w", encoding="utf-8") as f:
         json.dump(total_json, f, indent=4, ensure_ascii=False)
-
-    
+        
+        
 
 
 if __name__ == '__main__':

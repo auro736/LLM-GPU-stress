@@ -1,6 +1,7 @@
 #!/bin/bash
 # InstructionStats, ComputeWorkloadAnalysis, LaunchStats, Occupancy, Memory
 APP=$1
+GPU_ID=$2
 # INDEX=$2
 
 PERFORMANCE="stress2"
@@ -15,6 +16,8 @@ inter='_'
 # export PATH="~/anaconda3/bin:$PATH"
 source /home/user/phd/venvs/stressEnv/bin/activate
 # conda deactivate 
+
+export CUDA_VISIBLE_DEVICES=${GPU_ID}
 
 # conda activate gpustress
 

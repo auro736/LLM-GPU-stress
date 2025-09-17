@@ -110,7 +110,9 @@ def main():
 
     code_parser.adaptCode(file_name=base_file_name)
 
-    command = ["sudo", "bash", f"exe/complete_stress_profile.sh", f"{base_file_name}"]
+    gpu_id = 0
+
+    command = ["sudo", "bash", f"exe/complete_stress_profile.sh", f"{base_file_name}", f"{gpu_id}"]
     result = subprocess.run(command,
                    capture_output=True,
                    text=True,
@@ -125,7 +127,6 @@ def main():
     dir_eval = f'../evaluate/cupti/02_profiling_injection/test-apps/{base_file_name}'
     with open(os.path.join(dir_eval, out_file), 'r') as f:
         current_code = f.read()
-
 
     metrics_path = f'../evaluate/cupti/02_profiling_injection/data/postprocessed/stress2/{base_file_name}_evaluation.json' 
     with open(metrics_path, 'r') as f:
@@ -242,7 +243,7 @@ def main():
         # Adapt and profile the code
         code_parser.adaptCode(file_name=new_file_name)
 
-        command = ["sudo", "bash", f"exe/complete_stress_profile.sh", f"{new_file_name}"]
+        command = ["sudo", "bash", f"exe/complete_stress_profile.sh", f"{new_file_name}", f"{gpu_id}"]
         result = subprocess.run(command,
                     capture_output=True,
                     text=True,

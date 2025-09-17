@@ -10,10 +10,10 @@ def my_parser():
                     help="provider of LLMs", choices=['together', 'openai'], required=True)
     parser.add_argument("--api_key", type=str, default=None, required=True, 
                     help="API key")
-    parser.add_argument("--mode", type=str, default='zero-shot', 
-                    help="TogetherAI API key (uses env var if not provided)")
+    # parser.add_argument("--mode", type=str, default='zero-shot', 
+    #                 help="TogetherAI API key (uses env var if not provided)")
     parser.add_argument("--optimization_mode", type=str, default='temp', choices=['temp', 'clocks'],
-                    help="On which metric you want to optimize.")
+                    help="On which metric you want to optimize.", required=True)
     
     return parser.parse_args()
     
