@@ -14,6 +14,8 @@ def my_parser():
     #                 help="TogetherAI API key (uses env var if not provided)")
     parser.add_argument("--optimization_mode", type=str, default='temp', choices=['temp', 'clocks'],
                     help="On which metric you want to optimize.", required=True)
+    parser.add_argument("--epsilon", type=float, default=0.2, required=True, 
+                    help="epsilon value for optimization")
     
     return parser.parse_args()
     
