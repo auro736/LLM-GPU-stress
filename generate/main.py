@@ -10,6 +10,7 @@ from optimizerAgent import OptimizerAgent
 import os
 import sys
 import json
+import math
 import subprocess
 from datetime import datetime
 
@@ -157,6 +158,10 @@ def main():
             max_objective_metric = current_metrics["Max Temp °C"]
             epsilon = args.epsilon
             current_objective_metric = current_metrics["Steady Temp °C"]
+            if math.isnan(current_objective_metric):
+                print("⚠️ The test duration is insufficient to obtain a steady temperature reading. Please increase the execution time.")
+                break
+
 
         ratio = round(current_objective_metric/max_objective_metric, 2)
         print(f"\n--- Optimization Run {run}/{max_runs} (Iteration {iteration_count}) ---")

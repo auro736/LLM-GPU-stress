@@ -54,7 +54,7 @@ class CodeParser():
         with open(os.path.join(profiling_bash_template,"template.sh"), "r") as f:
             content = f.read()
         
-        content = content.replace("./test-apps/rora/rora 60", f"./test-apps/{file_name}/{file_name} 60")
+        content = content.replace("./test-apps/rora/rora", f"./test-apps/{file_name}/{file_name}")
         content = content.replace("data/raw/stress2/rora_$INJECTION_KERNEL_COUNT.txt", f"data/raw/stress2/{file_name}_$INJECTION_KERNEL_COUNT.txt")
         
         with open(f"../evaluate/cupti/02_profiling_injection/exe/bash/profiling_stress2/{file_name}.sh", "w") as f:
