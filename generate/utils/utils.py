@@ -10,12 +10,13 @@ def save_optimization_summary(
     target_reached,
     ratio,
     epsilon,
-    max_iterations,
-    max_runs,
+    max_correction_attempts,
+    max_optimization_attempts,
     max_objective_metric,
     current_metrics,
     output_dir,
-    timestamp
+    timestamp,
+    test_duration
 ):
     """
     Save optimization summary to both markdown file and console output.
@@ -28,12 +29,13 @@ def save_optimization_summary(
         target_reached (bool): Whether the target ratio was reached
         ratio (float): Final ratio achieved
         epsilon (float): Target epsilon threshold
-        max_iterations (int): Maximum iterations limit
-        max_runs (int): Maximum planned runs
+        max_optimization_attempts (int): Maximum number of optmization attempts by the Performance Optmizer agent, if reached the script stops
+        max_correction_attempts (int): Maximum number of correction attempts by the Compiling Assistant agent, if reached the script stops
         max_objective_metric (float): Maximum possible value for the objective metric
         current_metrics (dict): Final metrics dictionary
         output_dir (str): Directory to save the summary file
         timestamp (int/str): Timestamp for file naming
+        test_duration (int): Duration time set by the user for testing
     
     Returns:
         str: Path to the saved summary file, or None if saving failed
@@ -43,6 +45,7 @@ def save_optimization_summary(
     summary_content = f"""# Optimization Summary
 
     ## Results Overview
+    - **Base file name**: out{timestamp}
     - **Total iterations run**: {iteration_count}
     - **Final version**: V{current_version}
     - **Optimization mode**: {optimization_mode}
@@ -52,24 +55,22 @@ def save_optimization_summary(
     """
 
     if target_reached:
-        summary_content += f"""✅ **SUCCESS**: Target ratio {epsilon} was reached!
+        summary_content += f"""✅ **SUCCESS**: Target ratio {epsilon} was reached! In {iteration_count} attempts (max set at {max_optimization_attempts})
 - **Final ratio**: {ratio}
 """
-    elif iteration_count > max_iterations:
-        summary_content += f"""⚠️ **STOPPED**: Maximum iterations ({max_iterations}) reached
-- Process stopped to prevent infinite loop
+    elif iteration_count > max_optimization_attempts:
+        summary_content += f"""⚠️ **STOPPED**: Maximum iterations ({max_optimization_attempts}) reached
+- Process stopped to prevent infinite loop, ratio reached : {ratio}
 """
-    else:
-        summary_content += f"""📝 **COMPLETED**: All {max_runs} planned runs executed
-- Optimization completed normally
-"""
+
 
     summary_content += f"""
 ## Configuration
 - **Target epsilon**: {epsilon}
 - **Max objective metric**: {max_objective_metric}
-- **Max runs planned**: {max_runs}
-- **Max iterations limit**: {max_iterations}
+- **Max correction attempts set**: {max_correction_attempts}
+- **Max optimization attempts set**: {max_optimization_attempts}
+- **Test duration**: {test_duration}
 
 ## Final Metrics
 ```json
@@ -101,15 +102,6 @@ def save_optimization_summary(
     print(f"{'='*50}")
     print(f"Total iterations run: {iteration_count}")
     print(f"Final version: V{current_version}")
-
-    if target_reached:
-        print(f"✅ SUCCESS: Target ratio {epsilon} was reached!")
-        print(f"Final ratio: {ratio}")
-    elif iteration_count > max_iterations:
-        print(f"⚠️ STOPPED: Maximum iterations ({max_iterations}) reached")
-    else:
-        print(f"📝 COMPLETED: All {max_runs} planned runs executed")
-
     print(f"Optimization mode: {optimization_mode}")
     print(f"Final {optimization_mode} metric: {current_objective_metric}")
     

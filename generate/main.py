@@ -41,7 +41,7 @@ def main():
     )
 
     gpu_char = "one RTX 6000 Ada generation GPU with CUDA 12 and 48GB VRAM"
-    test_duration = "60"
+    test_duration = args.test_duration
 
     answer = cuda_expert_agent.generate(
         gpu_char=gpu_char, 
@@ -83,13 +83,13 @@ def main():
     compile_result = compilerAgent.compile(save_dir=dir_eval)
     print(compile_result)
 
-    max_attempts = 3
+    max_correction_attempts = args.max_correction_attempts #####
     attempt = 1
 
     if not compile_result["success"]:
         try:
             compilerAgent.fix_compile(
-                max_attempts=max_attempts,
+                max_attempts=max_correction_attempts,
                 attempt=attempt, 
                 compile_result=compile_result, 
                 save_dir=dir_eval, 
@@ -99,8 +99,7 @@ def main():
                 max_new_tokens=None, 
                 seed=4899
             )
-            # controlla poi prompt per correzioni codici
-            # metti var per temperatura e seed
+            
         except Exception as e:
             print(e)
             sys.exit(1)
@@ -134,7 +133,7 @@ def main():
 
     optimizer_agent = OptimizerAgent(model_type=args.model_type, model_name=args.model, api_key=args.api_key)
 
-    max_runs = 3
+    max_optimization_attempts = args.max_optimization_attempts
     current_version = 0 
 
     optimization_mode = args.optimization_mode
@@ -142,12 +141,12 @@ def main():
     iteration_count = 0
     target_reached = False
 
-    for run in range(1, max_runs + 1):
+    for run in range(1, max_optimization_attempts + 1):
         iteration_count += 1
         
         # Check safety counter first
-        if iteration_count > max_runs:
-            print(f"\n⚠️  Maximum iterations ({max_runs}) reached. Stopping optimization to prevent infinite loop.")
+        if iteration_count > max_optimization_attempts:
+            print(f"\n⚠️  Maximum iterations ({max_optimization_attempts}) reached. Stopping optimization to prevent infinite loop.")
             break
 
         if optimization_mode == 'clocks':
@@ -164,7 +163,7 @@ def main():
 
 
         ratio = round(current_objective_metric/max_objective_metric, 2)
-        print(f"\n--- Optimization Run {run}/{max_runs} (Iteration {iteration_count}) ---")
+        print(f"\n--- Optimization Run {run}/{max_optimization_attempts} (Iteration {iteration_count}) ---")
         print(f"Current {optimization_mode} metric: {current_objective_metric}")
         print(f"Target ratio: {epsilon}, Current ratio: {ratio}")
         
@@ -227,7 +226,7 @@ def main():
         if not compile_result["success"]:
             try:
                 compilerAgent.fix_compile(
-                    max_attempts=max_attempts,
+                    max_attempts=max_correction_attempts,
                     attempt=1,  # Reset attempt counter for each optimization run
                     compile_result=compile_result, 
                     save_dir=new_dir_eval, 
@@ -283,12 +282,13 @@ def main():
         target_reached=target_reached,
         ratio=ratio,
         epsilon=epsilon,
-        max_iterations=max_runs,
-        max_runs=max_runs,
+        max_correction_attempts=max_correction_attempts,
+        max_optimization_attempts=max_optimization_attempts,
         max_objective_metric=max_objective_metric,
         current_metrics=current_metrics,
         output_dir=output_dir,
-        timestamp=t
+        timestamp=t,
+        test_duration=test_duration
     )
     print(summary_path)
 

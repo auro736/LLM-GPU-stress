@@ -35,7 +35,7 @@ class BaseAgent():
                 temperature=temperature,
                 max_completion_tokens=max_new_tokens
             )
-            answer = completion.choices[0].message
+            answer = completion.choices[0].message.content
         return answer
         
 
