@@ -16,6 +16,12 @@ def my_parser():
                     help="On which metric you want to optimize.", required=True)
     parser.add_argument("--epsilon", type=float, default=0.2, required=True, 
                     help="epsilon value for optimization")
+    parser.add_argument("--cuda_temperature", type=float, default=0.5, required=True, 
+                    help="Temperature of CUDA expert agent")
+    parser.add_argument("--compiling_temperature", type=float, default=0.5, required=True, 
+                    help="Temperature of Compiling Assistant agent")
+    parser.add_argument("--performance_temperature", type=float, default=0.5, required=True, 
+                    help="Temperature of Performance optimizer agent")
     
     return parser.parse_args()
     

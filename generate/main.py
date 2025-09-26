@@ -13,10 +13,6 @@ import json
 import subprocess
 from datetime import datetime
 
-"""METTERE IN ARGS LE TEMP""" 
-
-"""CAPIRE COME GESTIRE SUGGERIMENTI""" 
-
 """GESTISCI MEGLIO IL PARSING IO CASTEREI TUTTO A CUDA, SUPPONENDO CHE CI GENERA SOLO CUDA CODE
 MAGARI DA SCRIVERE MEGLIO IL PROMPT DEL DEBUGGER""" #DONE MA SCHIFEZZA VERIFICA MEGLIO
 
@@ -49,7 +45,7 @@ def main():
     answer = cuda_expert_agent.generate(
         gpu_char=gpu_char, 
         test_duration=test_duration, 
-        temperature=0.5, 
+        temperature=args.cuda_temperature, 
         max_new_tokens=None, 
         seed=4899
     )
@@ -98,7 +94,7 @@ def main():
                 save_dir=dir_eval, 
                 out_file=out_file, 
                 timestamp=t,
-                temperature=0.5,
+                temperature=args.compiling_temperature,
                 max_new_tokens=None, 
                 seed=4899
             )
@@ -176,7 +172,7 @@ def main():
         suggestions = optimizer_agent.generate(
         final_code=current_code, 
         metrics=current_metrics, 
-        temperature=0.5, 
+        temperature=args.perfomance_temperature, 
         max_new_tokens=None, 
         seed=4899
         )
@@ -189,7 +185,7 @@ def main():
         new_code_response = cuda_expert_agent.generate(
             gpu_char=gpu_char, 
             test_duration=test_duration, 
-            temperature=0.5, 
+            temperature=args.cuda_temperature, 
             max_new_tokens=None, 
             seed=4899
         )
@@ -232,7 +228,7 @@ def main():
                     save_dir=new_dir_eval, 
                     out_file=new_out_file, 
                     timestamp=t,
-                    temperature=0.5,
+                    temperature=args.compiling_temperature,
                     max_new_tokens=None, 
                     seed=4899
                 )
@@ -288,7 +284,7 @@ def main():
         current_metrics=current_metrics,
         output_dir=output_dir,
         timestamp=t
-)
+    )
     print(summary_path)
 
    
