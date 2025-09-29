@@ -184,7 +184,7 @@ def main():
         print("Optimization suggestions:", suggestions)
 
         # Add suggestions to history and generate new code
-        cuda_expert_agent.add_to_history("user", suggestions)
+        cuda_expert_agent.add_to_history("user", f"Follow these suggestions to modify the previous code: \n {suggestions}")
         
         new_code_response = cuda_expert_agent.generate(
             gpu_char=gpu_char, 

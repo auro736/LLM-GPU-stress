@@ -1,0 +1,3 @@
+I’m not seeing the CUDA source or Makefile you’re trying to compile. The error you posted indicates that the build script is looking for `nvcc` at `/usr/local/cuda/bin/nvcc`, which isn’t present on your system.
+
+Could you please share the CUDA source file(s) and the Makefile (or build script) that you’re using? With that information I can adjust the paths or the build commands so it compiles correctly.
