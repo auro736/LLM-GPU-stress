@@ -29,14 +29,14 @@ def main(args):
     df = pd.DataFrame([])
     # Processa tutte le sessioni
     for session_match in session_pattern.finditer(content):
-        print('SESSION_MATCH: ', session_match)
+        # print('SESSION_MATCH: ', session_match)
         
         session_id = session_match.group(1)
         duration = session_match.group(2)
         session_block = session_match.group(3)
 
         for metric_match in metric_pattern.finditer(session_block):
-            print('METRIC_MATCH: ', metric_match)
+            # print('METRIC_MATCH: ', metric_match)
 
             post = 'No post'
             range_name = metric_match.group(1)
@@ -50,7 +50,8 @@ def main(args):
             try:
                 post = metric_name.split('__')[1].split('.')[2]
             except:
-                print(f'No futher post processing')
+                pass
+                # print(f'No futher post processing')
 
             # Aggiungi al dataset
             new_row = pd.DataFrame({

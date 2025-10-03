@@ -1,4 +1,5 @@
 import os
+import sys
 import pandas as pd
 from pynvml import *
 import argparse
@@ -106,7 +107,12 @@ def main(args):
     pc_file_name = f'{app}_1.csv'
     pc_file_path = os.path.join(data_path, pc_file_name)
 
-    pc_csv = pd.read_csv(pc_file_path)
+    # pc_csv = pd.read_csv(pc_file_path)
+    try:
+        pc_csv = pd.read_csv(pc_file_path)
+    except pd.errors.EmptyDataError:
+        print(f"[ERROR] {pc_file_path} is empty or corrupted.")
+        sys.exit(1)
 
     pc_csv['app'] = mapping_table[f'{app}']
     pc_csv['progress'] = (pc_csv['session_id'] - pc_csv['session_id'].min()) / (pc_csv['session_id'].max() - pc_csv['session_id'].min()) * 100
