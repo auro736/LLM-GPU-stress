@@ -1,6 +1,9 @@
 import argparse
+from datetime import datetime
 
 def my_parser():
+
+    t = int(round(datetime.now().timestamp()))
 
     parser = argparse.ArgumentParser(description="")
 
@@ -22,6 +25,10 @@ def my_parser():
                     help="Temperature of Performance optimizer agent")
     parser.add_argument("--test_duration", type=str, default="60", required=True, 
                     help="Test duration in seconds")
+    parser.add_argument("--gpu", type=str, default="one RTX 6000 Ada generation GPU with CUDA 12 and 48GB VRAM", required=True, 
+                    help="Description of the gpu under testing.")
+    parser.add_argument("--folder_name", type=str, default=t, required=True, 
+                    help="Name you want give to the experiments.")
     parser.add_argument("--max_correction_attempts", type=int, default=3, required=True, 
                     help="Maximum number of correction attempts by the Compiling Assistant agent, if reached the script stops")
     parser.add_argument("--max_optimization_attempts", type=int, default=5, required=True, 
